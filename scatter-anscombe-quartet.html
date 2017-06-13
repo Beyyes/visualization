@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="./jquery-3.2.1.min.js"></script>
+       <script type="text/javascript" src="./192.168.130.15.js"></script>
+       <script type="text/javascript">
+
+var time = []
+
+var jsondata = [];
+var idx;
+for (idx = 0;idx < 100;idx++) {
+	jsondata.push([idx, godjson[idx].cpuratio]);
+} 
+
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+var dataAll = [
+    [
+        [10.0, 8.04],
+        [8.0, 6.95],
+        [13.0, 7.58],
+        [9.0, 8.81],
+        [11.0, 8.33],
+        [14.0, 9.96],
+        [6.0, 7.24],
+        [4.0, 4.26],
+        [12.0, 10.84],
+        [7.0, 4.82],
+        [5.0, 5.68]
+    ],
+    [
+        [10.0, 9.14],
+        [8.0, 8.14],
+        [13.0, 8.74],
+        [9.0, 8.77],
+        [11.0, 9.26],
+        [14.0, 8.10],
+        [6.0, 6.13],
+        [4.0, 3.10],
+        [12.0, 9.13],
+        [7.0, 7.26],
+        [5.0, 4.74]
+    ],
+    [
+        [10.0, 7.46],
+        [8.0, 6.77],
+        [13.0, 12.74],
+        [9.0, 7.11],
+        [11.0, 7.81],
+        [14.0, 8.84],
+        [6.0, 6.08],
+        [4.0, 5.39],
+        [12.0, 8.15],
+        [7.0, 6.42],
+        [5.0, 5.73]
+    ],
+    [
+        [8.0, 6.58],
+        [8.0, 5.76],
+        [8.0, 7.71],
+        [8.0, 8.84],
+        [8.0, 8.47],
+        [8.0, 7.04],
+        [8.0, 5.25],
+        [19.0, 12.50],
+        [8.0, 5.56],
+        [8.0, 7.91],
+        [8.0, 6.89]
+    ]
+];
+
+function randomData() {
+    now = new Date(+now + oneDay);
+    var a = 10;
+    value = value + Math.random() * 21 - 10;
+    return {
+        name: now.toString(),
+        value: [
+            [now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'), Math.round(value)
+        ]
+    }
+}
+
+var data = [];
+var now = +new Date(1997, 9, 3);
+var oneDay = 24 * 3600 * 1000;
+var value = Math.random() * 1000;
+for (var i = 0; i < 1000; i++) {
+    data.push(randomData());
+}
+
+var markLineOpt = {
+    animation: false,
+    label: {
+        normal: {
+            formatter: 'y = 0.5 * x + 3',
+            textStyle: {
+                align: 'right'
+            }
+        }
+    },
+    lineStyle: {
+        normal: {
+            type: 'solid'
+        }
+    },
+    tooltip: {
+        formatter: 'y = 0.5 * x + 3'
+    },
+    data: [[{
+        coord: [0, 3],
+        symbol: 'none'
+    }, {
+        coord: [20, 13],
+        symbol: 'none'
+    }]]
+};
+
+option = {
+    title: {
+        text: 'Anscombe\'s quartet',
+        x: 'center',
+        y: 0
+    },
+    grid: [
+        {x: '7%', y: '7%', width: '24%', height: '24%'},
+        {x: '37%', y: '7%', width: '24%', height: '24%'},
+        {x: '67%', y: '7%', width: '24%', height: '24%'},
+        {x: '7%', y: '36%', width: '54%', height: '54%'},
+        {x: '57%', y: '36%', width: '24%', height: '24%'},
+        {x: '67%', y: '36%', width: '24%', height: '24%'},
+    ],
+    tooltip: {
+        formatter: 'Group {a}: ({c})'
+    },
+    // tooltip: {
+    //     trigger: 'axis',
+    //     formatter: function (params) {
+    //         params = params[0];
+    //         var date = new Date(params.name);
+    //         return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + ' : ' + params.value[1];
+    //     },
+    //     axisPointer: {
+    //         animation: false
+    //     }
+    // },
+    xAxis: [
+        {gridIndex: 0, min: 0, max: 20},
+        {gridIndex: 1, min: 0, max: 20},
+        {gridIndex: 2, min: 0, max: 20},
+        {   gridIndex: 3,
+            //type: 'time',
+            splitLine: {
+                show: false
+            }
+        },
+        {   gridIndex: 4,
+            type: 'time',
+            splitLine: {
+                show: false
+            }
+        },
+        {   gridIndex: 5,
+            type: 'time',
+            splitLine: {
+                show: false
+            }
+        }
+    ],
+    yAxis: [
+        {gridIndex: 0, min: 0, max: 15},
+        {gridIndex: 1, min: 0, max: 15},
+        {gridIndex: 2, min: 0, max: 15},
+        {   gridIndex: 3,
+            type: 'value',
+            boundaryGap: [0, '100%'],
+            splitLine: {
+                show: false
+            }
+        },
+        {   gridIndex: 4,
+            type: 'value',
+            boundaryGap: [0, '100%'],
+            splitLine: {
+                show: false
+            }
+        },
+        {   gridIndex: 5,
+            type: 'value',
+            boundaryGap: [0, '100%'],
+            splitLine: {
+                show: false
+            }
+        }
+    ],
+    series: [
+        {
+            name: '1',
+            type: 'scatter',
+            xAxisIndex: 0,
+            yAxisIndex: 0,
+            data: dataAll[0],
+            markLine: markLineOpt
+        },
+        {
+            name: '2',
+            type: 'scatter',
+            xAxisIndex: 1,
+            yAxisIndex: 1,
+            data: dataAll[1],
+            markLine: markLineOpt
+        },
+        {
+            name: '3',
+            type: 'scatter',
+            xAxisIndex: 2,
+            yAxisIndex: 2,
+            data: dataAll[2],
+            markLine: markLineOpt
+        },
+        {
+            name: '4',
+            type: 'line',
+            showSymbol: false,
+            hoverAnimation: false,
+            xAxisIndex: 3,
+            yAxisIndex: 3,
+            data: jsondata
+        },
+        {
+            name: '5',
+            type: 'line',
+            showSymbol: false,
+            hoverAnimation: false,
+            xAxisIndex: 4,
+            yAxisIndex: 4,
+            data: data
+        },
+        {                           
+            name: '6',
+            type: 'line',
+            showSymbol: false,
+            hoverAnimation: false,
+            xAxisIndex: 5,
+            yAxisIndex: 5,
+            data: data
+        }
+    ]
+};
+
+setInterval(function () {
+	//alert(jsondata[0])
+	// alert(data[0])
+// 	$.get('https://raw.githubusercontent.com/liukun4515/visualiztion/master/192.168.130.15.json').done(function (data) {  
+//     var p = JSON.parse(data);
+//     for (var i = 0; i < 3; i++) {
+//         jsondata.push([p[i].time, p[i].cpuratio]);
+//     }
+// }); 
+
+    for (var i = 0; i < 1; i++) {
+        data.shift();
+        data.push(randomData());
+        //jsondata.shift();
+        jsondata.push([idx, godjson[idx++].cpuratio]);
+    }
+
+    myChart.setOption({
+        series: [{},{},{},{data:jsondata},{data: data},{data:data}]
+    });
+}, 1000);;
+
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>
