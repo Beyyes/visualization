@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+    <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+<div id="container" style="height: 30%;"> </div>
+<div id="container2" style="height: 30%; width:40%"> </div>
+<div id="container3" style="height: 30%"> </div>
+<div id="container4" style="height: 30%"> </div>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+<script type="text/javascript"
+        src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+
+<script type="text/javascript" src="./data/normal/192.168.130.15.js"></script>
+<script type="text/javascript" src="./data/normal/192.168.130.16.js"></script>
+<script type="text/javascript" src="./data/normal/192.168.130.17.js"></script>
+<script type="text/javascript" src="./data/normal/192.168.130.18.js"></script>
+<script type="text/javascript" src="./data/normal/192.168.130.19.js"></script>
+<script type="text/javascript">
+
+    var dom = document.getElementById("container");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+    app.title = '节点网络传输示意图';
+
+    var normal15_disr = [], normal15_disw = [];
+    var normal16_disr = [], normal16_disw = [];
+    var normal17_disr = [], normal17_disw = [];
+    var idx_15, idx_16, idx_17, range = 100;
+    var time = [];
+
+    for (idx_15 = 0; idx_15 < range; idx_15++) {
+        time.push(idx_15);
+        normal15_disr.push(normal15[idx_15].diskReadSpeed);
+        normal15_disw.push(normal15[idx_15].diskWriteSpeed);
+    }
+
+    for (idx_16 = 0; idx_16 < range; idx_16++) {
+        normal16_disr.push(normal16[idx_16].diskReadSpeed);
+        normal16_disw.push(normal16[idx_16].diskWriteSpeed);
+    }
+
+    for (idx_17 = 0; idx_17 < range; idx_17++) {
+        normal17_disr.push(normal16[idx_17].diskReadSpeed);
+        normal17_disw.push(normal16[idx_17].diskWriteSpeed);
+    }
+
+    var colors = ['#5793f3', '#d14a61', '#675bba', '#ff9933'];
+
+
+    option = {
+        color: colors,
+
+        tooltip: {
+            trigger: 'none',
+            axisPointer: {
+                type: 'cross'
+            }
+        },
+        legend: {
+            data: ['15节点磁盘读', '15节点磁盘写', '16节点磁盘读', '16节点磁盘写']
+        },
+        grid: {
+            top: 70,
+            bottom: 50
+        },
+        xAxis: [
+            {
+                type: 'category',
+                axisTick: {
+                    alignWithLabel: true
+                },
+                axisLine: {
+                    onZero: false,
+                    lineStyle: {
+                        color: colors[1]
+                    }
+                },
+                data: time
+            },
+            {
+                type: 'category',
+                axisTick: {
+                    alignWithLabel: true
+                },
+                axisLine: {
+                    onZero: false,
+                    lineStyle: {
+                        color: colors[0]
+                    }
+                },
+                data: time
+            },
+            {
+                type: 'category',
+                axisTick: {
+                    alignWithLabel: true
+                },
+                axisLine: {
+                    onZero: false,
+                    lineStyle: {
+                        color: colors[1]
+                    }
+                },
+                data: time
+            },
+            {
+                type: 'category',
+                axisTick: {
+                    alignWithLabel: true
+                },
+                axisLine: {
+                    onZero: false,
+                    lineStyle: {
+                        color: colors[2]
+                    }
+                },
+                data: time
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value'
+            }
+        ],
+        series: [
+            {
+                name: '15节点磁盘读',
+                type: 'line',
+                xAxisIndex: 1,
+                smooth: true,
+                data: normal15_disr
+            },
+            {
+                name: '15节点磁盘写',
+                type: 'line',
+                smooth: true,
+                data: normal15_disw
+            },
+            {
+                name: '16节点磁盘读',
+                type: 'line',
+                smooth: true,
+                data: normal16_disr
+            },
+            {
+                name: '16节点磁盘写',
+                type: 'line',
+                smooth: true,
+                data: normal16_disw
+            }
+        ]
+    };
+
+    setInterval(function () {
+
+
+
+
+    }, 1000);
+
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+
+</script>
+
+<script type="text/javascript">
+
+    var dom = document.getElementById("container2");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+    app.title = '节点网络传输示意图';
+
+    var colors = ['#5793f3', '#d14a61', '#675bba'];
+
+
+    option = {
+        color: colors,
+
+        tooltip: {
+            trigger: 'none',
+            axisPointer: {
+                type: 'cross'
+            }
+        },
+        legend: {
+            data: ['16节点磁盘读', '16节点磁盘写']
+        },
+        grid: {
+            top: 70,
+            bottom: 50
+        },
+        xAxis: [
+            {
+                type: 'category',
+                axisTick: {
+                    alignWithLabel: true
+                },
+                axisLine: {
+                    onZero: false,
+                    lineStyle: {
+                        color: colors[1]
+                    }
+                },
+//                axisPointer: {
+//                    label: {
+//                        formatter: function (params) {
+//                            return '降水量  ' + params.value
+//                                + (params.seriesData.length ? '：' + params.seriesData[0].data : '');
+//                        }
+//                    }
+//                },
+                data: time
+            },
+            {
+                type: 'category',
+                axisTick: {
+                    alignWithLabel: true
+                },
+                axisLine: {
+                    onZero: false,
+                    lineStyle: {
+                        color: colors[0]
+                    }
+                },
+//                axisPointer: {
+//                    label: {
+//                        formatter: function (params) {
+//                            return '降水量  ' + params.value
+//                                + (params.seriesData.length ? '：' + params.seriesData[0].data : '');
+//                        }
+//                    }
+//                },
+                data: time
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value'
+            }
+        ],
+        series: [
+            {
+                name: '16节点磁盘读',
+                type: 'line',
+                xAxisIndex: 1,
+                smooth: true,
+                data: normal16_disr
+            },
+            {
+                name: '16节点磁盘写',
+                type: 'line',
+                smooth: true,
+                data: normal16_disw
+            }
+        ]
+    };
+
+    setInterval(function () {
+
+
+
+
+    }, 1000);
+
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+
+</script>
+
+<script type="text/javascript">
+
+    var dom = document.getElementById("container3");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+    app.title = '节点网络传输示意图';
+
+    var colors = ['#5793f3', '#d14a61', '#675bba'];
+
+
+    option = {
+        color: colors,
+
+        tooltip: {
+            trigger: 'none',
+            axisPointer: {
+                type: 'cross'
+            }
+        },
+        legend: {
+            data: ['17节点磁盘读', '17节点磁盘写']
+        },
+        grid: {
+            top: 70,
+            bottom: 50
+        },
+        xAxis: [
+            {
+                type: 'category',
+                axisTick: {
+                    alignWithLabel: true
+                },
+                axisLine: {
+                    onZero: false,
+                    lineStyle: {
+                        color: colors[1]
+                    }
+                },
+//                axisPointer: {
+//                    label: {
+//                        formatter: function (params) {
+//                            return '降水量  ' + params.value
+//                                + (params.seriesData.length ? '：' + params.seriesData[0].data : '');
+//                        }
+//                    }
+//                },
+                data: time
+            },
+            {
+                type: 'category',
+                axisTick: {
+                    alignWithLabel: true
+                },
+                axisLine: {
+                    onZero: false,
+                    lineStyle: {
+                        color: colors[0]
+                    }
+                },
+//                axisPointer: {
+//                    label: {
+//                        formatter: function (params) {
+//                            return '降水量  ' + params.value
+//                                + (params.seriesData.length ? '：' + params.seriesData[0].data : '');
+//                        }
+//                    }
+//                },
+                data: time
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value'
+            }
+        ],
+        series: [
+            {
+                name: '17节点磁盘读',
+                type: 'line',
+                xAxisIndex: 1,
+                smooth: true,
+                data: normal16_disr
+            },
+            {
+                name: '17节点磁盘写',
+                type: 'line',
+                smooth: true,
+                data: normal16_disw
+            }
+        ]
+    };
+
+    setInterval(function () {
+
+
+
+
+    }, 1000);
+
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+
+</script>
+
+<script type="text/javascript">
+
+    var dom = document.getElementById("container4");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+    app.title = '节点网络传输示意图';
+
+    var colors = ['#5793f3', '#d14a61', '#675bba'];
+
+
+    option = {
+        color: colors,
+
+        tooltip: {
+            trigger: 'none',
+            axisPointer: {
+                type: 'cross'
+            }
+        },
+        legend: {
+            data: ['17节点磁盘读', '17节点磁盘写']
+        },
+        grid: {
+            top: 70,
+            bottom: 50
+        },
+        xAxis: [
+            {
+                type: 'category',
+                axisTick: {
+                    alignWithLabel: true
+                },
+                axisLine: {
+                    onZero: false,
+                    lineStyle: {
+                        color: colors[1]
+                    }
+                },
+//                axisPointer: {
+//                    label: {
+//                        formatter: function (params) {
+//                            return '降水量  ' + params.value
+//                                + (params.seriesData.length ? '：' + params.seriesData[0].data : '');
+//                        }
+//                    }
+//                },
+                data: time
+            },
+            {
+                type: 'category',
+                axisTick: {
+                    alignWithLabel: true
+                },
+                axisLine: {
+                    onZero: false,
+                    lineStyle: {
+                        color: colors[0]
+                    }
+                },
+//                axisPointer: {
+//                    label: {
+//                        formatter: function (params) {
+//                            return '降水量  ' + params.value
+//                                + (params.seriesData.length ? '：' + params.seriesData[0].data : '');
+//                        }
+//                    }
+//                },
+                data: time
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value'
+            }
+        ],
+        series: [
+            {
+                name: '17节点磁盘读',
+                type: 'line',
+                xAxisIndex: 1,
+                smooth: true,
+                data: normal16_disr
+            },
+            {
+                name: '17节点磁盘写',
+                type: 'line',
+                smooth: true,
+                data: normal16_disw
+            }
+        ]
+    };
+
+    setInterval(function () {
+
+
+
+
+    }, 1000);
+
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+
+</script>
+
+</body>
+</html>

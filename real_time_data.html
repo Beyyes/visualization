@@ -17,6 +17,7 @@
 <script type="text/javascript" src="./192.168.130.15.js"></script>
 <script type="text/javascript" src="./192.168.130.16.js"></script>
 <script type="text/javascript" src="./192.168.130.17.js"></script>
+<script type="text/javascript" src="./data/normal/192.168.130.15.js"></script>
 <script type="text/javascript">
 
     var range = 100;
@@ -70,11 +71,11 @@
 
 
     var x1 = '3%', x2 = '35%', x3 = '70%';
-    var y1 = '7%', y2 = '35%', y3 = '73%';
+    var y1 = '7%', y2 = '35%', y3 = '68%';
     var height = '15%', width = '25%';
     option = {
         title: {
-            text: '实时时序数据可视化',
+            text: '内存、CPU实时时序数据可视化',
             x: 'center',
             y: 0
         },
@@ -180,6 +181,7 @@
                 splitLine: {
                     show: false
                 },
+                max: 100,
                 name: 'memory'
             },
             {
@@ -187,6 +189,7 @@
                 gridIndex: 4,
                 type: 'value',
                 boundaryGap: [0, '100%'],
+                max: 100,
                 splitLine: {
                     show: false
                 }
@@ -195,6 +198,7 @@
                 name: 'memory',
                 gridIndex: 5,
                 type: 'value',
+                max: 100,
                 boundaryGap: [0, '100%'],
                 splitLine: {
                     show: false
@@ -234,9 +238,6 @@
                 markLine: {
                     silent: true,
                     data: [
-                    // {
-                    //     yAxis: 10
-                    // }, 
                     {
                         yAxis: 40
                     }, {
@@ -251,14 +252,32 @@
                 type: 'line',
                 xAxisIndex: 1,
                 yAxisIndex: 1,
-                data: jsondata16_cpu
+                data: jsondata16_cpu,
+                markLine: {
+                    silent: true,
+                    data: [
+                        {
+                            yAxis: 40
+                        }, {
+                            yAxis: 80
+                        }]
+                }
             },
             {
                 name: '3',
                 type: 'line',
                 xAxisIndex: 2,
                 yAxisIndex: 2,
-                data: jsondata17_cpu
+                data: jsondata17_cpu,
+                markLine: {
+                    silent: true,
+                    data: [
+                        {
+                            yAxis: 40
+                        }, {
+                            yAxis: 80
+                        }]
+                }
             },
             {
                 name: '4',
@@ -267,7 +286,16 @@
                 hoverAnimation: false,
                 xAxisIndex: 3,
                 yAxisIndex: 3,
-                data: jsondata15_memory
+                data: jsondata15_memory,
+                markLine: {
+                    silent: true,
+                    data: [
+                        {
+                            yAxis: 40
+                        }, {
+                            yAxis: 80
+                        }]
+                },
             },
             {
                 name: '5',
@@ -276,7 +304,16 @@
                 hoverAnimation: false,
                 xAxisIndex: 4,
                 yAxisIndex: 4,
-                data: jsondata16_memory
+                data: jsondata16_memory,
+                markLine: {
+                    silent: true,
+                    data: [
+                        {
+                            yAxis: 40
+                        }, {
+                            yAxis: 80
+                        }]
+                },
             },
             {
                 name: '6',
@@ -285,7 +322,16 @@
                 hoverAnimation: false,
                 xAxisIndex: 5,
                 yAxisIndex: 5,
-                data: jsondata17_memory
+                data: jsondata17_memory,
+                markLine: {
+                    silent: true,
+                    data: [
+                        {
+                            yAxis: 40
+                        }, {
+                            yAxis: 80
+                        }]
+                },
             }
         ]
     };
