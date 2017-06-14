@@ -19,6 +19,8 @@
 <script type="text/javascript" src="./192.168.130.17.js"></script>
 <script type="text/javascript">
 
+    var range = 100;
+
     var jsondata15_cpu = [];
     var jsondata15_memory = [];
     var jsondata16_cpu = [];
@@ -27,15 +29,15 @@
     var jsondata17_memory = [];
     var idx_15, idx_16, idx_17;
 
-    for (idx_15 = 0; idx_15 < 100; idx_15++) {
+    for (idx_15 = 0; idx_15 < range; idx_15++) {
         jsondata15_cpu.push([idx_15, godjson[idx_15].cpuratio]);
         jsondata15_memory.push([idx_15, godjson[idx_15].memUsed]);
     }
-    for (idx_16 = 0; idx_16 < 100; idx_16++) {
+    for (idx_16 = 0; idx_16 < range; idx_16++) {
         jsondata16_cpu.push([idx_16, godjson16[idx_16].cpuratio]);
         jsondata16_memory.push([idx_16, godjson16[idx_16].memUsed]);
     }
-    for (idx_17 = 0; idx_17 < 100; idx_17++) {
+    for (idx_17 = 0; idx_17 < range; idx_17++) {
         jsondata17_cpu.push([idx_17, godjson17[idx_17].cpuratio]);
         jsondata17_memory.push([idx_17, godjson17[idx_17].memUsed]);
     }
@@ -70,7 +72,7 @@
     var height = '25%', width = '25%';
     option = {
         title: {
-            text: '时序数据\'s 可视化',
+            text: '实时时序数据可视化',
             x: 'center',
             y: 0
         },
@@ -99,43 +101,37 @@
         xAxis: [
             {
                 gridIndex: 0,
+                splitLine: {show: false},
                 //type: 'time',
-                splitLine: {
-                    show: false
-                }
+                name: 'time'
             },
             {
                 gridIndex: 1,
                 //type: 'time',
-                splitLine: {
-                    show: false
-                }
+                splitLine: {show: false},
+                name: 'time'
             },
             {
                 gridIndex: 2,
                 //type: 'time',
-                splitLine: {
-                    show: false
-                }
+                splitLine: {show: false},
+                name: 'time'
             },
             {
                 gridIndex: 3,
                 //type: 'time',
-                splitLine: {
-                    show: false
-                }
+                splitLine: {show: false},
+                name: 'time'
             },
             {
                 gridIndex: 4,
-                splitLine: {
-                    show: false
-                }
+                splitLine: {show: false},
+                name: 'time'
             },
             {
                 gridIndex: 5,
-                splitLine: {
-                    show: false
-                }
+                splitLine: {show: false},
+                name: 'time'
             }
         ],
         yAxis: [
@@ -146,6 +142,7 @@
                 splitLine: {
                     show: false
                 },
+                max: 100,
                 name: 'cpu'
             },
             {
@@ -155,6 +152,7 @@
                 splitLine: {
                     show: false
                 },
+                max: 100,
                 name: 'cpu'
             },
             {
@@ -164,6 +162,7 @@
                 splitLine: {
                     show: false
                 },
+                max: 100,
                 name: 'cpu'
             },
             {
@@ -194,13 +193,48 @@
                 }
             }
         ],
+        visualMap: {
+            top: 10,
+            right: 10,
+            pieces: [{
+                gt: 0,
+                lte: 30,
+                color: '#096'
+            }, {
+                gt: 31,
+                lte: 50,
+                color: '#ffde33'
+            }, {
+                gt: 51,
+                lte: 70,
+                color: '#ff9933'
+            }, {
+                gt: 71,
+                color: '#7e0023'
+            }],
+            outOfRange: {
+                color: '#999'
+            }
+        },
         series: [
             {
                 name: '哈哈',
                 type: 'line',
                 xAxisIndex: 0,
                 yAxisIndex: 0,
-                data: jsondata15_cpu
+                data: jsondata15_cpu,
+                markLine: {
+                    silent: true,
+                    data: [{
+                        yAxis: 10
+                    }, {
+                        yAxis: 40
+                    }, {
+                        yAxis: 80
+                    }]
+                },
+                showSymbol: false,
+                hoverAnimation: false
             },
             {
                 name: '2',
@@ -248,8 +282,8 @@
 
     setInterval(function () {
 
-        for (var i = 0; i < 10; i++) {
-            //jsondata.shift();
+        for (var i = 0; i < 5; i++) {
+            //jsondata15_cpu.shift();
             jsondata15_cpu.push([idx_15, godjson[idx_15].cpuratio]);
             jsondata15_memory.push([idx_15, godjson[idx_15++].memUsed]);
 
@@ -261,7 +295,7 @@
         }
 
         myChart.setOption({
-            series: [{data: jsondata15_cpu}, {data:jsondata16_cpu}, {data:jsondata17_cpu}, {data: jsondata15_memory}, {data: jsondata16_memory}, {data: jsondata17_memory}]
+            series: [{data: jsondata15_cpu}, {data: jsondata16_cpu}, {data: jsondata17_cpu}, {data: jsondata15_memory}, {data: jsondata16_memory}, {data: jsondata17_memory}]
         });
     }, 1000);
     ;
