@@ -1,154 +1,248 @@
 <!DOCTYPE html>
 <html style="height: 100%">
-   <head>
-       <meta charset="utf-8">
-   </head>
-   <body style="height: 100%; margin: 0">
-       <div id="container" style="height: 100%"></div>
-       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
-       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
-       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
-       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
-       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
-       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
-       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
-       <script type="text/javascript">
-var dom = document.getElementById("container");
-var myChart = echarts.init(dom);
-var app = {};
-option = null;
-option = {
-    title: {
-        text: 'Graph 简单示例'
-    },
-    tooltip: {},
-    animationDurationUpdate: 1500,
-    animationEasingUpdate: 'quinticInOut',
-    series : [
-        {
-            type: 'graph',
-            layout: 'none',
-            symbolSize: 50,
-            roam: true,
-            label: {
-                normal: {
-                    show: true
-                }
-            },
-            edgeSymbol: ['circle', 'arrow'],
-            edgeSymbolSize: [4, 10],
-            edgeLabel: {
-                normal: {
-                    textStyle: {
-                        fontSize: 20
-                    }
-                }
-            },
-            data: [{
-                name: '节点1',
-                x: 500,
-                y: 200,
-                symbolSize: 134
-            }, {
-                name: '节点2',
-                x: 800,
-                y: 300
-            }, {
-                name: '节点3',
-                x: 550,
-                y: 100
-            }, {
-                name: '节点4',
-                x: 550,
-                y: 500
-            },  {
-                name: '节点5',
-                x: 350,
-                y: 400,
-                position: 'right'
-            }],
-            // links: [],
-            links: [{
-                source: 0,
-                target: 1,
-                symbolSize: [5, 20],
+<head>
+    <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+<div id="container" style="height: 100%"></div>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+<script type="text/javascript"
+        src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+<script type="text/javascript">
+    
+    var dom = document.getElementById("container");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+    option = {
+        title: {
+            text: '网络之间通信动态变化图'
+        },
+        tooltip: {},
+        animationDurationUpdate: 1500,
+        animationEasingUpdate: 'quinticInOut',
+        series: [
+            {
+                type: 'graph',
+                layout: 'circular',
+                symbolSize: 50,
+                roam: true,
                 label: {
                     normal: {
-                        // show: true
+                        show: true
                     }
                 },
+                edgeSymbol: ['circle', 'arrow'],
+                edgeSymbolSize: [1, 10],
+                edgeLabel: {
+                    normal: {
+                        textStyle: {
+                            fontSize: 20
+                        }
+                    }
+                },
+                data: nodes,
+                links: links,
                 lineStyle: {
                     normal: {
-                        width: 5,
-                        color: '#f27322',
-                        curveness: 0.2
+                        opacity: 0.9,
+                        width: 2,
+                        curveness: 0
                     }
                 }
             }
-            // }, {
-            //     source: '节点2',
-            //     target: '节点1',
-            //     label: {
-            //         normal: {
-            //             // show: true
-            //         }
-            //     },
-            //     lineStyle: {
-            //         normal: { curveness: 0.2 }
-            //     }
-            // }
-            , {
-                source: '节点2',
-                target: '节点1',
-                label: {
-                    normal: {
-                        // show: true
-                        
+        ]
+    };
+    
+    var initsize = 38;
+    var nodes = [{
+                    name: '节点1',
+                    // x: 100,
+                    // y: 300,
+                    symbolSize: initsize
+                }, {
+                    name: '节点2',
+                    // x: 400,
+                    // y: 300,
+                    symbolSize: initsize
+                }, {
+                    name: '节点3',
+                    // x: 700,
+                    // y: 300,
+                    symbolSize: initsize
+                }, {
+                    name: '节点4',
+                    // x: 100,
+                    // y: 500,
+                    symbolSize: initsize
+                }, {
+                    name: '节点5',
+                    // x: 400,
+                    // y: 500,
+                    symbolSize: initsize
+                }, {
+                    name: '节点6',
+                    // x: 700,
+                    // y: 500,
+                    symbolSize: initsize
+                }];
+    var links = [];
+    var colors = ['#aadd33','#aa121a','#f27322','#dd22ff','#2fd21a','#111111','#127322']
+    var tmpl = [{
+                    source: 0,
+                    target: 1,
+                    lineStyle: {
+                        normal: {
+                            width: 20,
+                            color: colors[0],
+                            curveness: Math.random()/4
+                        }
+                    }
+                }, {
+                    source: 1,
+                    target: 0,
+                    lineStyle: {
+                        normal: {
+                            curveness: Math.random()/4,
+                            width: 5,
+                            color: colors[1]
+                        }
+                    }
+                }, {
+                    source: 1,
+                    target: 2,
+                    lineStyle: {
+                        normal: {
+                            curveness: Math.random()/4,
+                            width: 7,
+                            color: colors[1]
+                        }
+                    }
+                }, {
+                    source: 1,
+                    target: 3,
+                    lineStyle: {
+                        normal: {
+                            curveness: Math.random()/4,
+                            width: Math.random()*5,
+                            color: colors[1]
+                        }
+                    }
+                }, {
+                    source: 4,
+                    target: 0,
+                    lineStyle: {
+                        normal: {
+                            curveness: 0.2,
+                            width: 9,
+                            color: colors[4]
+                        }
+                    }
+                }, {
+                    source: 4,
+                    target: 0,
+                    lineStyle: {
+                        normal: {
+                            curveness: 0.1,
+                            width: 9,
+                            color: colors[3]
+                        }
+                    }
+                },{
+                    source: 5,
+                    target: 3,
+                    lineStyle: {
+                        normal: {
+                            curveness: 0.3,
+                            width: 7,
+                            color: colors[5]
+                        }
+                    }
+                },{
+                    source: 5,
+                    target: 2,
+                    lineStyle: {
+                        normal: {
+                            curveness: Math.random()/4,
+                            width: 4,
+                            color: colors[5]
+                        }
                     }
                 },
-                lineStyle: {
-                    normal: { 
-                        curveness: 0.6,
-                        width: 5,
-                        color: '#22222'
+                {
+                    source: 5,
+                    target: 0,
+                    lineStyle: {
+                        normal: {
+                            curveness: 0.6,
+                            width: 10,
+                            color: colors[5]
+                        }
+                    }
+                },
+                {
+                    source: 2,
+                    target: 4,
+                    lineStyle: {
+                        normal: {
+                            curveness: 0.3,
+                            width: 8,
+                            color: colors[2]
+                        }
                     }
                 }
-            }, {
-                source: '节点1',
-                target: '节点3'
-            }, {
-                source: '节点2',
-                target: '节点3'
-            }, {
-                source: '节点2',
-                target: '节点4'
-            }, {
-                source: '节点1',
-                target: '节点4'
-            }, {
-                source: '节点5',
-                target: '节点1',
-                lineStyle: {
-                    normal: { 
-                        curveness: 0.6,
-                        width: 3,
-                        color: '#dd22ff'
-                    }
-                }
-            }],
-            lineStyle: {
-                normal: {
-                    opacity: 0.9,
-                    width: 2,
-                    curveness: 0
-                }
-            }
+                ];
+
+    var count = 0;
+
+    function randomNode() {
+        return {
+            name : count.toString(), 
+            x : Math.random()*1000,
+            y : Math.random()*1000,
+            symbolSize: Math.random()*100
         }
-    ]
-};;
-if (option && typeof option === "object") {
-    myChart.setOption(option, true);
-}
-       </script>
-   </body>
+    }
+
+    function randomLink() {
+        return {
+            source : Math.floor(Math.random()*count),
+            target : Math.floor(Math.random()*count)
+        }
+    }
+
+    
+
+    setInterval(function () {
+        if (count < tmpl.length) {
+            // if (tmpl[count].source == '节点2') {
+            //     nodes[0].symbolSize += 20;
+            //     //tmpl[count].lineStyle.normal.width = 10;
+            //     links.push(tmpl[count]);
+            // }
+            //tmpl[count].lineStyle.normal.push({color:'#f27322'});
+            nodes[tmpl[count].target].symbolSize += 20;
+            links.push(tmpl[count]);
+        }
+        count ++;
+
+        myChart.setOption({
+            series: [{data: nodes, links:links}]
+        });
+
+    }, 1000);
+
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+
+
+
+</script>
+</body>
 </html>
