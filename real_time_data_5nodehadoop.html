@@ -4,10 +4,17 @@
     <meta charset="utf-8">
 </head>
 <body style="height: 100%; margin: 0">
-<div id="container" style="height: 30%"></div>
-<div id="container2" style="height: 30%"></div>
-<div id="container3" style="height: 30%"></div>
-<div id="container4" style="height: 30%"></div>
+<div id="container" style="height: 37%"></div>
+<div style=" position:relative; width: 1000px;height:400px;">
+<div id="container15_net" style="width: 380px;height: 300px; position: absolute;left:10px;top: 10px"> </div>
+<div id="container16_net" style="width: 380px;height: 300px; position: absolute;left:410px;top: 10px"> </div>
+    <div id="container17_net" style="width: 380px;height: 300px; position: absolute;left:810px;top: 10px"> </div>
+</div>
+<!--<div id="container15_net" style="height: 30%"></div>-->
+<!--<div id="container16_net" style="height: 30%"></div>-->
+<!--<div id="container3" style="height: 30%"></div>-->
+<!--<div id="container4" style="height: 30%"></div>-->
+
 <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
 <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
 <script type="text/javascript"
@@ -54,12 +61,12 @@
     var myChart = echarts.init(dom);
     option = null;
 
-    var x1 = '3%', x2 = '35%', x3 = '70%';
-    var y1 = '17%', y2 = '60%', y3 = '68%';
+    var x1 = '3%', x2 = '35%', x3 = '67%';
+    var y1 = '17%', y2 = '60%';
     var height = '25%', width = '26%';
     option = {
         title: {
-            text: '内存、CPU实时时序数据可视化',
+            text: '内存、CPU实时数据可视化',
             x: 'center',
             y: 0
         },
@@ -340,18 +347,10 @@
 
 <script type="text/javascript">
 
-    var dom2 = document.getElementById("container2");
-    var myChart2 = echarts.init(dom2);
-    var option2 = null;
+    var myChart2 = echarts.init(document.getElementById("container15_net"));
 
     var jsondata15_nets = [];
     var jsondata15_netr = [];
-
-    var jsondata16_nets = [];
-    var jsondata16_netr = [];
-
-    var jsondata17_nets = [];
-    var jsondata17_netr = [];
 
     var index2 = 0;
     var time2 = [];
@@ -359,46 +358,20 @@
     for (index2  = 0;index2 < range; index2++) {
         time2.push(index2);
         jsondata15_nets.push(mr15[index2].netSendSpeed);
-        jsondata15_netr.push(mr15[index2].netRecvSpedd);
-
-        jsondata16_nets.push(mr16[index2].netSendSpeed);
-        jsondata16_netr.push(mr16[index2].netRecvSpedd);
-
-        jsondata17_nets.push(mr17[index2].netSendSpeed);
-        jsondata17_netr.push(mr17[index2].netRecvSpedd);
+        jsondata15_netr.push(-mr15[index2].netRecvSpedd);
     }
 
-    var height = '15%', width = '25%';
-    option2 = {
-        title: {
-            text: '网络传输',
-            x: 'center',
-            y: 0
-        },
-        grid: [
-            {x: x1, y: y1, width: width, height: height},
-            {x: x2, y: y1, width: width, height: height},
-            {x: x3, y: y1, width: width, height: height}
-        ],
+    var option2 = {
+//        title: {
+//            text: '15网络传输',
+//            x: 'center',
+//            y: 0
+//        },
         tooltip: {
             formatter: 'Group {a}: ({c})'
         },
         xAxis: [
             {
-                gridIndex: 0,
-                splitLine: {show: false},
-                name: 'time',
-                type: 'category',
-                data: time2
-            },
-            {
-                gridIndex: 1,
-                splitLine: {show: false},
-                name: 'time',
-                data: time2
-            },
-            {
-                gridIndex: 2,
                 splitLine: {show: false},
                 name: 'time',
                 data: time2
@@ -406,17 +379,6 @@
         ],
         yAxis: [
             {
-                gridIndex: 0,
-                type: 'value',
-                boundaryGap: [0, '100%'],
-                max:0.7,
-                splitLine: {
-                    show: false
-                },
-                name: 'net'
-            },
-            {
-                gridIndex: 1,
                 type: 'value',
                 boundaryGap: [0, '100%'],
                 splitLine: {
@@ -424,15 +386,6 @@
                 },
                 name: 'net'
             },
-            {
-                gridIndex: 2,
-                type: 'value',
-                boundaryGap: [0, '100%'],
-                splitLine: {
-                    show: false
-                },
-                name: 'net'
-            }
         ],
         series: [
             {
@@ -440,95 +393,35 @@
                 xAxisIndex: 0,
                 yAxisIndex: 0,
                 data: jsondata15_netr,
-                max : 0.3,
-                markLine: {
-                    silent: true,
-                    data: [
-                        {
-                            yAxis: 0.001
-                        }, {
-                            yAxis: 0.003
-                        }]
-                },
                 showSymbol: false,
                 hoverAnimation: false
             },
             {
                 type: 'line',
-                xAxisIndex: 0,
-                yAxisIndex: 0,
-                max:0.3,
                 data: jsondata15_nets,
-                markLine: {
-                    silent: true,
-                    data: [
-                        {
-                            yAxis: 0.002
-                        }, {
-                            yAxis: 0.005
-                        }]
-                },
                 showSymbol: false,
                 hoverAnimation: false
-            },
-            {
-                type: 'line',
-                xAxisIndex: 1,
-                yAxisIndex: 1,
-                data: jsondata16_netr,
-                markLine: {
-                    silent: true,
-                    data: [
-                        {
-                            yAxis: 40
-                        }, {
-                            yAxis: 80
-                        }]
-                }
-            },
-            {
-                type: 'line',
-                xAxisIndex: 2,
-                yAxisIndex: 2,
-                data: jsondata17_netr,
-                markLine: {
-                    silent: true,
-                    data: [
-                        {
-                            yAxis: 40
-                        }, {
-                            yAxis: 80
-                        }]
-                }
             }
         ]
     };
 
     setInterval(function () {
 
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < 2; i++) {
             time2.shift();
             time2.push(index2);
 
             jsondata15_nets.shift();
             jsondata15_nets.push(mr15[index2].netSendSpeed);
             jsondata15_netr.shift();
-            jsondata15_netr.push(mr15[index2].netRecvSpedd);
-
-            jsondata16_nets.push();
-            jsondata16_netr.shift();
-            jsondata16_netr.push(mr16[index2].netRecvSpedd);
-
-            jsondata17_nets.push();
-            jsondata17_netr.shift();
-            jsondata17_netr.push(mr17[index2].netRecvSpedd);
+            jsondata15_netr.push(-mr15[index2].netRecvSpedd);
 
             index2++;
         }
 
         myChart2.setOption({
-            xAxis: [{data: time2},{data: time2},{data: time2},{data: time2}],
-            series: [{data: jsondata15_netr},{data: jsondata15_nets} ,{data: jsondata16_netr}, {data: jsondata17_netr}]
+            xAxis: [{data: time2}],
+            series: [{data: jsondata15_netr},{data: jsondata15_nets}]
         });
     }, 1000);
 
@@ -539,9 +432,180 @@
 
 <script type="text/javascript">
 
-    var dom3 = document.getElementById("container4");
-    var myChart4 = echarts.init(dom3);
-    var option4 = null;
+    var dom16net = document.getElementById("container16_net");
+    var myChart16net = echarts.init(dom16net);
+
+    var time16net = [];
+    var jsondata16_nets = [];
+    var jsondata16_netr = [];
+
+    var index16net = 0;
+    for (index16net  = 0;index16net < range; index16net++) {
+        time16net.push(index16net);
+
+        jsondata16_nets.push(mr16[index16net].netSendSpeed);
+        jsondata16_netr.push(-mr16[index16net].netRecvSpedd);
+
+    }
+
+    var option16net = {
+        title: {
+            text: '网络传输',
+            x: 'center',
+            y: 0
+        },
+        tooltip: {
+            formatter: 'Group {a}: ({c})'
+        },
+        xAxis: [
+            {
+                splitLine: {show: false},
+                name: 'time',
+                data: time16net
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                boundaryGap: [0, '100%'],
+                splitLine: {
+                    show: false
+                },
+                name: 'net'
+            },
+        ],
+        series: [
+            {
+                type: 'line',
+                xAxisIndex: 0,
+                yAxisIndex: 0,
+                data: jsondata16_netr,
+                showSymbol: false,
+                hoverAnimation: false
+            },
+            {
+                type: 'line',
+                data: jsondata16_nets,
+                showSymbol: false,
+                hoverAnimation: false
+            }
+        ]
+    };
+
+    setInterval(function () {
+
+        for (var i = 0; i < 2; i++) {
+            time16net.shift();
+            time16net.push(index16net);
+
+            jsondata16_nets.shift();
+            jsondata16_nets.push(mr16[index16net].netSendSpeed);
+            jsondata16_netr.shift();
+            jsondata16_netr.push(-mr16[index16net].netRecvSpedd);
+
+            index16net++;
+        }
+
+        myChart16net.setOption({
+            xAxis: [{data: time16net}],
+            series: [{data: jsondata16_netr},{data: jsondata16_nets}]
+        });
+    }, 1000);
+
+    if (option16net && typeof option16net === "object") {
+        myChart16net.setOption(option16net, true);
+    }
+</script>
+
+<script type="text/javascript">
+
+    var myChart17net = echarts.init(document.getElementById("container17_net"));
+
+    var time17net = [];
+    var jsondata17_nets = [];
+    var jsondata17_netr = [];
+
+    var index17net = 0;
+    for (index17net  = 0;index17net < range; index17net++) {
+        time17net.push(index17net);
+
+        jsondata17_nets.push(mr17[index17net].netSendSpeed);
+        jsondata17_netr.push(-mr17[index17net].netRecvSpedd);
+
+    }
+
+    var option17net = {
+//        title: {
+//            text: '16网络传输',
+//            x: 'center',
+//            y: 0
+//        },
+        tooltip: {
+            formatter: 'Group {a}: ({c})'
+        },
+        xAxis: [
+            {
+                splitLine: {show: false},
+                name: 'time',
+                data: time17net
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                boundaryGap: [0, '100%'],
+                splitLine: {
+                    show: false
+                },
+                name: 'net'
+            },
+        ],
+        series: [
+            {
+                type: 'line',
+                xAxisIndex: 0,
+                yAxisIndex: 0,
+                data: jsondata17_netr,
+                showSymbol: false,
+                hoverAnimation: false
+            },
+            {
+                type: 'line',
+                data: jsondata17_nets,
+                showSymbol: false,
+                hoverAnimation: false
+            }
+        ]
+    };
+
+    setInterval(function () {
+
+        for (var i = 0; i < 2; i++) {
+            time17net.shift();
+            time17net.push(index17net);
+
+            jsondata17_nets.shift();
+            jsondata17_nets.push(mr17[index17net].netSendSpeed);
+            jsondata17_netr.shift();
+            jsondata17_netr.push(-mr17[index17net].netRecvSpedd);
+
+            index17net++;
+        }
+
+        myChart17net.setOption({
+            xAxis: [{data: time17net}],
+            series: [{data: jsondata17_netr},{data: jsondata17_nets}]
+        });
+    }, 1000);
+
+    if (option17net && typeof option17net === "object") {
+        myChart17net.setOption(option17net, true);
+    }
+</script>
+
+<script type="text/javascript">
+
+    var myChart15disk = echarts.init(document.getElementById("container15_disk"));
 
     var jsondata15_diskw = [];
     var jsondata15_diskr = [];
@@ -552,24 +616,24 @@
     var jsondata17_nets = [];
     var jsondata17_netr = [];
 
-    var index2 = 0;
-    var time2 = [];
+    var index15disk = 0;
+    var time15disk = [];
 
-    for (index2  = 0;index2 < range; index2++) {
-        time2.push(index2);
-        jsondata15_diskw.push(mr15[index2].diskWriteSpeed);
-        jsondata15_diskr.push(-mr15[index2].diskReadSpeed-100);
+    for (index15disk  = 0;index15disk < range; index15disk++) {
+        time15disk.push(index15disk);
+        jsondata15_diskw.push(mr15[index15disk].diskWriteSpeed);
+        jsondata15_diskr.push(-mr15[index15disk].diskReadSpeed);
 
-        jsondata16_diskw.push(mr16[index2].diskWriteSpeed);
-        jsondata16_diskr.push(mr16[index2].diskReadSpeed);
+        jsondata16_diskw.push(mr16[index15disk].diskWriteSpeed);
+        jsondata16_diskr.push(mr16[index15disk].diskReadSpeed);
 
-        jsondata17_nets.push(mr17[index2].diskWriteSpeed);
-        jsondata17_netr.push(mr17[index2].diskReadSpeed);
+        jsondata17_nets.push(mr17[index15disk].diskWriteSpeed);
+        jsondata17_netr.push(mr17[index15disk].diskReadSpeed);
     }
 
-    option4 = {
+    var option15disk = {
         title: {
-            text: '磁盘读写',
+            text: '15磁盘读写',
             x: 'center',
             y: 10
         },
@@ -581,7 +645,7 @@
                 splitLine: {show: false},
                 name: 'time',
                 type: 'category',
-                data: time2
+                data: time15disk
             }
         ],
         yAxis: [
@@ -641,8 +705,8 @@
 //        });
 //    }, 1000);
 
-    if (option4 && typeof option4 === "object") {
-        myChart4.setOption(option4, true);
+    if (option15disk && typeof option15disk === "object") {
+        myChart15disk.setOption(option15disk, true);
     }
 </script>
 
