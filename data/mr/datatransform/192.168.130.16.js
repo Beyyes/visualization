@@ -1,1 +1,1571 @@
-[{"time":"1","ip":"192.168.130.16","cpu":"42","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"2","ip":"192.168.130.16","cpu":"39","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"3","ip":"192.168.130.16","cpu":"40","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"4","ip":"192.168.130.16","cpu":"44","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"5","ip":"192.168.130.16","cpu":"37","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"6","ip":"192.168.130.16","cpu":"42","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"7","ip":"192.168.130.16","cpu":"37","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"8","ip":"192.168.130.16","cpu":"43","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"9","ip":"192.168.130.16","cpu":"36","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"10","ip":"192.168.130.16","cpu":"37","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"11","ip":"192.168.130.16","cpu":"36","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"12","ip":"192.168.130.16","cpu":"37","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"13","ip":"192.168.130.16","cpu":"35","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"14","ip":"192.168.130.16","cpu":"38","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"15","ip":"192.168.130.16","cpu":"41","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"16","ip":"192.168.130.16","cpu":"40","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"17","ip":"192.168.130.16","cpu":"41","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"18","ip":"192.168.130.16","cpu":"42","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"19","ip":"192.168.130.16","cpu":"42","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"20","ip":"192.168.130.16","cpu":"43","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"21","ip":"192.168.130.16","cpu":"41","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"22","ip":"192.168.130.16","cpu":"38","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"23","ip":"192.168.130.16","cpu":"36","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"24","ip":"192.168.130.16","cpu":"41","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"25","ip":"192.168.130.16","cpu":"42","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"26","ip":"192.168.130.16","cpu":"37","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"27","ip":"192.168.130.16","cpu":"38","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"28","ip":"192.168.130.16","cpu":"44","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"29","ip":"192.168.130.16","cpu":"41","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"30","ip":"192.168.130.16","cpu":"35","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"31","ip":"192.168.130.16","cpu":"36","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"32","ip":"192.168.130.16","cpu":"38","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"33","ip":"192.168.130.16","cpu":"43","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"34","ip":"192.168.130.16","cpu":"42","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"35","ip":"192.168.130.16","cpu":"39","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"36","ip":"192.168.130.16","cpu":"42","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"37","ip":"192.168.130.16","cpu":"41","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"38","ip":"192.168.130.16","cpu":"40","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"39","ip":"192.168.130.16","cpu":"36","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"40","ip":"192.168.130.16","cpu":"39","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"41","ip":"192.168.130.16","cpu":"41","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"42","ip":"192.168.130.16","cpu":"41","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"43","ip":"192.168.130.16","cpu":"40","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"44","ip":"192.168.130.16","cpu":"41","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"45","ip":"192.168.130.16","cpu":"44","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"46","ip":"192.168.130.16","cpu":"38","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"47","ip":"192.168.130.16","cpu":"43","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"48","ip":"192.168.130.16","cpu":"36","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"49","ip":"192.168.130.16","cpu":"36","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"50","ip":"192.168.130.16","cpu":"35","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"51","ip":"192.168.130.16","cpu":"42","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"52","ip":"192.168.130.16","cpu":"41","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"53","ip":"192.168.130.16","cpu":"38","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"54","ip":"192.168.130.16","cpu":"38","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"55","ip":"192.168.130.16","cpu":"37","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"56","ip":"192.168.130.16","cpu":"36","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"57","ip":"192.168.130.16","cpu":"41","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"58","ip":"192.168.130.16","cpu":"38","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"59","ip":"192.168.130.16","cpu":"42","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"60","ip":"192.168.130.16","cpu":"43","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"61","ip":"192.168.130.16","cpu":"39","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"62","ip":"192.168.130.16","cpu":"35","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"63","ip":"192.168.130.16","cpu":"41","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"64","ip":"192.168.130.16","cpu":"44","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"65","ip":"192.168.130.16","cpu":"41","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"66","ip":"192.168.130.16","cpu":"41","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"67","ip":"192.168.130.16","cpu":"44","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"68","ip":"192.168.130.16","cpu":"42","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"69","ip":"192.168.130.16","cpu":"38","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"0.0022","diskWriteSpeed":"","diskReadSpeed":""},{"time":"63","ip":"192.168.130.16","cpu":"45","memUsed":"40","memFree":"60","netSendSpeed":"0.0025","netRecvSpedd":"18.98497","diskWriteSpeed":"","diskReadSpeed":""},{"time":"64","ip":"192.168.130.16","cpu":"54","memUsed":"41","memFree":"59","netSendSpeed":"0.0025","netRecvSpedd":"18.148926","diskWriteSpeed":"","diskReadSpeed":""},{"time":"65","ip":"192.168.130.16","cpu":"50","memUsed":"43","memFree":"57","netSendSpeed":"0.0025","netRecvSpedd":"18.227118","diskWriteSpeed":"","diskReadSpeed":""},{"time":"66","ip":"192.168.130.16","cpu":"58","memUsed":"40","memFree":"60","netSendSpeed":"0.0025","netRecvSpedd":"18.803406","diskWriteSpeed":"","diskReadSpeed":""},{"time":"67","ip":"192.168.130.16","cpu":"44","memUsed":"41","memFree":"59","netSendSpeed":"0.0025","netRecvSpedd":"10.832233","diskWriteSpeed":"","diskReadSpeed":""},{"time":"68","ip":"192.168.130.16","cpu":"45","memUsed":"40","memFree":"60","netSendSpeed":"0.0025","netRecvSpedd":"19.891243","diskWriteSpeed":"","diskReadSpeed":""},{"time":"69","ip":"192.168.130.16","cpu":"37","memUsed":"43","memFree":"57","netSendSpeed":"0.0025","netRecvSpedd":"19.180025","diskWriteSpeed":"","diskReadSpeed":""},{"time":"70","ip":"192.168.130.16","cpu":"54","memUsed":"43","memFree":"57","netSendSpeed":"0.0025","netRecvSpedd":"11.2351055","diskWriteSpeed":"","diskReadSpeed":""},{"time":"71","ip":"192.168.130.16","cpu":"52","memUsed":"43","memFree":"57","netSendSpeed":"0.0025","netRecvSpedd":"12.14191","diskWriteSpeed":"","diskReadSpeed":""},{"time":"72","ip":"192.168.130.16","cpu":"62","memUsed":"43","memFree":"57","netSendSpeed":"0.0025","netRecvSpedd":"13.548832","diskWriteSpeed":"","diskReadSpeed":""},{"time":"73","ip":"192.168.130.16","cpu":"59","memUsed":"41","memFree":"59","netSendSpeed":"0.0025","netRecvSpedd":"14.095243","diskWriteSpeed":"","diskReadSpeed":""},{"time":"74","ip":"192.168.130.16","cpu":"61","memUsed":"41","memFree":"59","netSendSpeed":"0.0025","netRecvSpedd":"18.50005","diskWriteSpeed":"","diskReadSpeed":""},{"time":"75","ip":"192.168.130.16","cpu":"54","memUsed":"40","memFree":"60","netSendSpeed":"0.0025","netRecvSpedd":"14.30208","diskWriteSpeed":"","diskReadSpeed":""},{"time":"76","ip":"192.168.130.16","cpu":"58","memUsed":"40","memFree":"60","netSendSpeed":"0.0025","netRecvSpedd":"12.7024145","diskWriteSpeed":"","diskReadSpeed":""},{"time":"77","ip":"192.168.130.16","cpu":"54","memUsed":"43","memFree":"57","netSendSpeed":"0.0025","netRecvSpedd":"11.227554","diskWriteSpeed":"","diskReadSpeed":""},{"time":"78","ip":"192.168.130.16","cpu":"63","memUsed":"41","memFree":"59","netSendSpeed":"0.0025","netRecvSpedd":"17.085123","diskWriteSpeed":"","diskReadSpeed":""},{"time":"79","ip":"192.168.130.16","cpu":"63","memUsed":"42","memFree":"58","netSendSpeed":"0.0025","netRecvSpedd":"18.796745","diskWriteSpeed":"","diskReadSpeed":""},{"time":"80","ip":"192.168.130.16","cpu":"47","memUsed":"41","memFree":"59","netSendSpeed":"0.0025","netRecvSpedd":"19.298199","diskWriteSpeed":"","diskReadSpeed":""},{"time":"81","ip":"192.168.130.16","cpu":"40","memUsed":"43","memFree":"57","netSendSpeed":"0.0025","netRecvSpedd":"10.7851925","diskWriteSpeed":"","diskReadSpeed":""},{"time":"82","ip":"192.168.130.16","cpu":"54","memUsed":"40","memFree":"60","netSendSpeed":"0.0025","netRecvSpedd":"14.04595","diskWriteSpeed":"","diskReadSpeed":""},{"time":"83","ip":"192.168.130.16","cpu":"35","memUsed":"41","memFree":"59","netSendSpeed":"0.0025","netRecvSpedd":"15.15194","diskWriteSpeed":"","diskReadSpeed":""},{"time":"84","ip":"192.168.130.16","cpu":"52","memUsed":"42","memFree":"58","netSendSpeed":"0.0025","netRecvSpedd":"16.261684","diskWriteSpeed":"","diskReadSpeed":""},{"time":"85","ip":"192.168.130.16","cpu":"57","memUsed":"43","memFree":"57","netSendSpeed":"0.0025","netRecvSpedd":"19.036385","diskWriteSpeed":"","diskReadSpeed":""},{"time":"86","ip":"192.168.130.16","cpu":"53","memUsed":"42","memFree":"58","netSendSpeed":"0.0025","netRecvSpedd":"17.909094","diskWriteSpeed":"","diskReadSpeed":""},{"time":"87","ip":"192.168.130.16","cpu":"56","memUsed":"40","memFree":"60","netSendSpeed":"0.0025","netRecvSpedd":"18.420353","diskWriteSpeed":"","diskReadSpeed":""},{"time":"88","ip":"192.168.130.16","cpu":"42","memUsed":"43","memFree":"57","netSendSpeed":"0.0025","netRecvSpedd":"11.594711","diskWriteSpeed":"","diskReadSpeed":""},{"time":"89","ip":"192.168.130.16","cpu":"46","memUsed":"42","memFree":"58","netSendSpeed":"0.0025","netRecvSpedd":"11.952865","diskWriteSpeed":"","diskReadSpeed":""},{"time":"90","ip":"192.168.130.16","cpu":"54","memUsed":"40","memFree":"60","netSendSpeed":"0.0025","netRecvSpedd":"13.472888","diskWriteSpeed":"","diskReadSpeed":""},{"time":"91","ip":"192.168.130.16","cpu":"56","memUsed":"40","memFree":"60","netSendSpeed":"0.0025","netRecvSpedd":"13.886846","diskWriteSpeed":"","diskReadSpeed":""},{"time":"92","ip":"192.168.130.16","cpu":"39","memUsed":"40","memFree":"60","netSendSpeed":"0.0025","netRecvSpedd":"15.837885","diskWriteSpeed":"","diskReadSpeed":""},{"time":"93","ip":"192.168.130.16","cpu":"46","memUsed":"43","memFree":"57","netSendSpeed":"0.0025","netRecvSpedd":"13.573429","diskWriteSpeed":"","diskReadSpeed":""},{"time":"94","ip":"192.168.130.16","cpu":"64","memUsed":"43","memFree":"57","netSendSpeed":"0.0025","netRecvSpedd":"14.084986","diskWriteSpeed":"","diskReadSpeed":""},{"time":"95","ip":"192.168.130.16","cpu":"39","memUsed":"43","memFree":"57","netSendSpeed":"0.0025","netRecvSpedd":"19.993855","diskWriteSpeed":"","diskReadSpeed":""},{"time":"96","ip":"192.168.130.16","cpu":"60","memUsed":"41","memFree":"59","netSendSpeed":"0.0025","netRecvSpedd":"10.581282","diskWriteSpeed":"","diskReadSpeed":""},{"time":"97","ip":"192.168.130.16","cpu":"49","memUsed":"40","memFree":"60","netSendSpeed":"0.0025","netRecvSpedd":"11.132932","diskWriteSpeed":"","diskReadSpeed":""},{"time":"98","ip":"192.168.130.16","cpu":"36","memUsed":"40","memFree":"60","netSendSpeed":"0.0025","netRecvSpedd":"18.50959","diskWriteSpeed":"","diskReadSpeed":""},{"time":"99","ip":"192.168.130.16","cpu":"64","memUsed":"41","memFree":"59","netSendSpeed":"0.0025","netRecvSpedd":"11.90211","diskWriteSpeed":"","diskReadSpeed":""},{"time":"100","ip":"192.168.130.16","cpu":"46","memUsed":"42","memFree":"58","netSendSpeed":"0.0025","netRecvSpedd":"11.977811","diskWriteSpeed":"","diskReadSpeed":""},{"time":"101","ip":"192.168.130.16","cpu":"46","memUsed":"41","memFree":"59","netSendSpeed":"0.0025","netRecvSpedd":"12.914696","diskWriteSpeed":"","diskReadSpeed":""},{"time":"102","ip":"192.168.130.16","cpu":"57","memUsed":"41","memFree":"59","netSendSpeed":"0.0025","netRecvSpedd":"18.488174","diskWriteSpeed":"","diskReadSpeed":""},{"time":"103","ip":"192.168.130.16","cpu":"41","memUsed":"41","memFree":"59","netSendSpeed":"0.0025","netRecvSpedd":"13.9174595","diskWriteSpeed":"","diskReadSpeed":""},{"time":"104","ip":"192.168.130.16","cpu":"51","memUsed":"41","memFree":"59","netSendSpeed":"0.0025","netRecvSpedd":"10.043433","diskWriteSpeed":"","diskReadSpeed":""},{"time":"105","ip":"192.168.130.16","cpu":"47","memUsed":"41","memFree":"59","netSendSpeed":"0.0025","netRecvSpedd":"11.655215","diskWriteSpeed":"","diskReadSpeed":""},{"time":"106","ip":"192.168.130.16","cpu":"63","memUsed":"42","memFree":"58","netSendSpeed":"0.0025","netRecvSpedd":"16.928959","diskWriteSpeed":"","diskReadSpeed":""},{"time":"107","ip":"192.168.130.16","cpu":"42","memUsed":"40","memFree":"60","netSendSpeed":"0.0025","netRecvSpedd":"17.871292","diskWriteSpeed":"","diskReadSpeed":""},{"time":"108","ip":"192.168.130.16","cpu":"48","memUsed":"41","memFree":"59","netSendSpeed":"0.0025","netRecvSpedd":"16.223423","diskWriteSpeed":"","diskReadSpeed":""},{"time":"109","ip":"192.168.130.16","cpu":"48","memUsed":"43","memFree":"57","netSendSpeed":"0.0025","netRecvSpedd":"15.661286","diskWriteSpeed":"","diskReadSpeed":""},{"time":"110","ip":"192.168.130.16","cpu":"60","memUsed":"40","memFree":"60","netSendSpeed":"0.0025","netRecvSpedd":"15.186235","diskWriteSpeed":"","diskReadSpeed":""},{"time":"111","ip":"192.168.130.16","cpu":"48","memUsed":"40","memFree":"60","netSendSpeed":"0.0025","netRecvSpedd":"19.92641","diskWriteSpeed":"","diskReadSpeed":""},{"time":"112","ip":"192.168.130.16","cpu":"54","memUsed":"43","memFree":"57","netSendSpeed":"0.0025","netRecvSpedd":"19.289385","diskWriteSpeed":"","diskReadSpeed":""},{"time":"113","ip":"192.168.130.16","cpu":"40","memUsed":"42","memFree":"58","netSendSpeed":"0.0025","netRecvSpedd":"17.18695","diskWriteSpeed":"","diskReadSpeed":""},{"time":"114","ip":"192.168.130.16","cpu":"58","memUsed":"42","memFree":"58","netSendSpeed":"0.0025","netRecvSpedd":"13.932779","diskWriteSpeed":"","diskReadSpeed":""},{"time":"115","ip":"192.168.130.16","cpu":"61","memUsed":"43","memFree":"57","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"116","ip":"192.168.130.16","cpu":"38","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"117","ip":"192.168.130.16","cpu":"41","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"118","ip":"192.168.130.16","cpu":"41","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"119","ip":"192.168.130.16","cpu":"35","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"120","ip":"192.168.130.16","cpu":"35","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"121","ip":"192.168.130.16","cpu":"36","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"122","ip":"192.168.130.16","cpu":"42","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"123","ip":"192.168.130.16","cpu":"36","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"124","ip":"192.168.130.16","cpu":"44","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"125","ip":"192.168.130.16","cpu":"37","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"126","ip":"192.168.130.16","cpu":"40","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"127","ip":"192.168.130.16","cpu":"36","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"128","ip":"192.168.130.16","cpu":"40","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"129","ip":"192.168.130.16","cpu":"40","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"130","ip":"192.168.130.16","cpu":"42","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"131","ip":"192.168.130.16","cpu":"41","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"132","ip":"192.168.130.16","cpu":"41","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"133","ip":"192.168.130.16","cpu":"39","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"134","ip":"192.168.130.16","cpu":"42","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"135","ip":"192.168.130.16","cpu":"42","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"136","ip":"192.168.130.16","cpu":"42","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"137","ip":"192.168.130.16","cpu":"36","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"138","ip":"192.168.130.16","cpu":"43","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"139","ip":"192.168.130.16","cpu":"38","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"140","ip":"192.168.130.16","cpu":"44","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"141","ip":"192.168.130.16","cpu":"40","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"142","ip":"192.168.130.16","cpu":"44","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"143","ip":"192.168.130.16","cpu":"44","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"144","ip":"192.168.130.16","cpu":"41","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"145","ip":"192.168.130.16","cpu":"35","memUsed":"31","memFree":"69","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"146","ip":"192.168.130.16","cpu":"42","memUsed":"33","memFree":"67","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"147","ip":"192.168.130.16","cpu":"44","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"148","ip":"192.168.130.16","cpu":"43","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"149","ip":"192.168.130.16","cpu":"41","memUsed":"32","memFree":"68","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""},{"time":"150","ip":"192.168.130.16","cpu":"43","memUsed":"30","memFree":"70","netSendSpeed":"0.0025","netRecvSpedd":"11.022471","diskWriteSpeed":"","diskReadSpeed":""}]
+var ds16 = [{
+    "time": "1",
+    "ip": "192.168.130.16",
+    "cpu": "42",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "2",
+    "ip": "192.168.130.16",
+    "cpu": "39",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "3",
+    "ip": "192.168.130.16",
+    "cpu": "40",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "4",
+    "ip": "192.168.130.16",
+    "cpu": "44",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "5",
+    "ip": "192.168.130.16",
+    "cpu": "37",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "6",
+    "ip": "192.168.130.16",
+    "cpu": "42",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "7",
+    "ip": "192.168.130.16",
+    "cpu": "37",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "8",
+    "ip": "192.168.130.16",
+    "cpu": "43",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "9",
+    "ip": "192.168.130.16",
+    "cpu": "36",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "10",
+    "ip": "192.168.130.16",
+    "cpu": "37",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "11",
+    "ip": "192.168.130.16",
+    "cpu": "36",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "12",
+    "ip": "192.168.130.16",
+    "cpu": "37",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "13",
+    "ip": "192.168.130.16",
+    "cpu": "35",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "14",
+    "ip": "192.168.130.16",
+    "cpu": "38",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "15",
+    "ip": "192.168.130.16",
+    "cpu": "41",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "16",
+    "ip": "192.168.130.16",
+    "cpu": "40",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "17",
+    "ip": "192.168.130.16",
+    "cpu": "41",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "18",
+    "ip": "192.168.130.16",
+    "cpu": "42",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "19",
+    "ip": "192.168.130.16",
+    "cpu": "42",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "20",
+    "ip": "192.168.130.16",
+    "cpu": "43",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "21",
+    "ip": "192.168.130.16",
+    "cpu": "41",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "22",
+    "ip": "192.168.130.16",
+    "cpu": "38",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "23",
+    "ip": "192.168.130.16",
+    "cpu": "36",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "24",
+    "ip": "192.168.130.16",
+    "cpu": "41",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "25",
+    "ip": "192.168.130.16",
+    "cpu": "42",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "26",
+    "ip": "192.168.130.16",
+    "cpu": "37",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "27",
+    "ip": "192.168.130.16",
+    "cpu": "38",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "28",
+    "ip": "192.168.130.16",
+    "cpu": "44",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "29",
+    "ip": "192.168.130.16",
+    "cpu": "41",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "30",
+    "ip": "192.168.130.16",
+    "cpu": "35",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "31",
+    "ip": "192.168.130.16",
+    "cpu": "36",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "32",
+    "ip": "192.168.130.16",
+    "cpu": "38",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "33",
+    "ip": "192.168.130.16",
+    "cpu": "43",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "34",
+    "ip": "192.168.130.16",
+    "cpu": "42",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "35",
+    "ip": "192.168.130.16",
+    "cpu": "39",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "36",
+    "ip": "192.168.130.16",
+    "cpu": "42",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "37",
+    "ip": "192.168.130.16",
+    "cpu": "41",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "38",
+    "ip": "192.168.130.16",
+    "cpu": "40",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "39",
+    "ip": "192.168.130.16",
+    "cpu": "36",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "40",
+    "ip": "192.168.130.16",
+    "cpu": "39",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "41",
+    "ip": "192.168.130.16",
+    "cpu": "41",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "42",
+    "ip": "192.168.130.16",
+    "cpu": "41",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "43",
+    "ip": "192.168.130.16",
+    "cpu": "40",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "44",
+    "ip": "192.168.130.16",
+    "cpu": "41",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "45",
+    "ip": "192.168.130.16",
+    "cpu": "44",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "46",
+    "ip": "192.168.130.16",
+    "cpu": "38",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "47",
+    "ip": "192.168.130.16",
+    "cpu": "43",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "48",
+    "ip": "192.168.130.16",
+    "cpu": "36",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "49",
+    "ip": "192.168.130.16",
+    "cpu": "36",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "50",
+    "ip": "192.168.130.16",
+    "cpu": "35",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "51",
+    "ip": "192.168.130.16",
+    "cpu": "42",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "52",
+    "ip": "192.168.130.16",
+    "cpu": "41",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "53",
+    "ip": "192.168.130.16",
+    "cpu": "38",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "54",
+    "ip": "192.168.130.16",
+    "cpu": "38",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "55",
+    "ip": "192.168.130.16",
+    "cpu": "37",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "56",
+    "ip": "192.168.130.16",
+    "cpu": "36",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "57",
+    "ip": "192.168.130.16",
+    "cpu": "41",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "58",
+    "ip": "192.168.130.16",
+    "cpu": "38",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "59",
+    "ip": "192.168.130.16",
+    "cpu": "42",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "60",
+    "ip": "192.168.130.16",
+    "cpu": "43",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "61",
+    "ip": "192.168.130.16",
+    "cpu": "39",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "62",
+    "ip": "192.168.130.16",
+    "cpu": "35",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "63",
+    "ip": "192.168.130.16",
+    "cpu": "41",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "64",
+    "ip": "192.168.130.16",
+    "cpu": "44",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "65",
+    "ip": "192.168.130.16",
+    "cpu": "41",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "66",
+    "ip": "192.168.130.16",
+    "cpu": "41",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "67",
+    "ip": "192.168.130.16",
+    "cpu": "44",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "68",
+    "ip": "192.168.130.16",
+    "cpu": "42",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "69",
+    "ip": "192.168.130.16",
+    "cpu": "38",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "0.0022",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "63",
+    "ip": "192.168.130.16",
+    "cpu": "45",
+    "memUsed": "40",
+    "memFree": "60",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "18.98497",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "64",
+    "ip": "192.168.130.16",
+    "cpu": "54",
+    "memUsed": "41",
+    "memFree": "59",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "18.148926",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "65",
+    "ip": "192.168.130.16",
+    "cpu": "50",
+    "memUsed": "43",
+    "memFree": "57",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "18.227118",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "66",
+    "ip": "192.168.130.16",
+    "cpu": "58",
+    "memUsed": "40",
+    "memFree": "60",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "18.803406",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "67",
+    "ip": "192.168.130.16",
+    "cpu": "44",
+    "memUsed": "41",
+    "memFree": "59",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "10.832233",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "68",
+    "ip": "192.168.130.16",
+    "cpu": "45",
+    "memUsed": "40",
+    "memFree": "60",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "19.891243",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "69",
+    "ip": "192.168.130.16",
+    "cpu": "37",
+    "memUsed": "43",
+    "memFree": "57",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "19.180025",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "70",
+    "ip": "192.168.130.16",
+    "cpu": "54",
+    "memUsed": "43",
+    "memFree": "57",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.2351055",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "71",
+    "ip": "192.168.130.16",
+    "cpu": "52",
+    "memUsed": "43",
+    "memFree": "57",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "12.14191",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "72",
+    "ip": "192.168.130.16",
+    "cpu": "62",
+    "memUsed": "43",
+    "memFree": "57",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "13.548832",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "73",
+    "ip": "192.168.130.16",
+    "cpu": "59",
+    "memUsed": "41",
+    "memFree": "59",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "14.095243",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "74",
+    "ip": "192.168.130.16",
+    "cpu": "61",
+    "memUsed": "41",
+    "memFree": "59",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "18.50005",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "75",
+    "ip": "192.168.130.16",
+    "cpu": "54",
+    "memUsed": "40",
+    "memFree": "60",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "14.30208",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "76",
+    "ip": "192.168.130.16",
+    "cpu": "58",
+    "memUsed": "40",
+    "memFree": "60",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "12.7024145",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "77",
+    "ip": "192.168.130.16",
+    "cpu": "54",
+    "memUsed": "43",
+    "memFree": "57",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.227554",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "78",
+    "ip": "192.168.130.16",
+    "cpu": "63",
+    "memUsed": "41",
+    "memFree": "59",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "17.085123",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "79",
+    "ip": "192.168.130.16",
+    "cpu": "63",
+    "memUsed": "42",
+    "memFree": "58",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "18.796745",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "80",
+    "ip": "192.168.130.16",
+    "cpu": "47",
+    "memUsed": "41",
+    "memFree": "59",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "19.298199",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "81",
+    "ip": "192.168.130.16",
+    "cpu": "40",
+    "memUsed": "43",
+    "memFree": "57",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "10.7851925",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "82",
+    "ip": "192.168.130.16",
+    "cpu": "54",
+    "memUsed": "40",
+    "memFree": "60",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "14.04595",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "83",
+    "ip": "192.168.130.16",
+    "cpu": "35",
+    "memUsed": "41",
+    "memFree": "59",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "15.15194",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "84",
+    "ip": "192.168.130.16",
+    "cpu": "52",
+    "memUsed": "42",
+    "memFree": "58",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "16.261684",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "85",
+    "ip": "192.168.130.16",
+    "cpu": "57",
+    "memUsed": "43",
+    "memFree": "57",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "19.036385",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "86",
+    "ip": "192.168.130.16",
+    "cpu": "53",
+    "memUsed": "42",
+    "memFree": "58",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "17.909094",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "87",
+    "ip": "192.168.130.16",
+    "cpu": "56",
+    "memUsed": "40",
+    "memFree": "60",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "18.420353",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "88",
+    "ip": "192.168.130.16",
+    "cpu": "42",
+    "memUsed": "43",
+    "memFree": "57",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.594711",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "89",
+    "ip": "192.168.130.16",
+    "cpu": "46",
+    "memUsed": "42",
+    "memFree": "58",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.952865",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "90",
+    "ip": "192.168.130.16",
+    "cpu": "54",
+    "memUsed": "40",
+    "memFree": "60",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "13.472888",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "91",
+    "ip": "192.168.130.16",
+    "cpu": "56",
+    "memUsed": "40",
+    "memFree": "60",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "13.886846",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "92",
+    "ip": "192.168.130.16",
+    "cpu": "39",
+    "memUsed": "40",
+    "memFree": "60",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "15.837885",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "93",
+    "ip": "192.168.130.16",
+    "cpu": "46",
+    "memUsed": "43",
+    "memFree": "57",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "13.573429",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "94",
+    "ip": "192.168.130.16",
+    "cpu": "64",
+    "memUsed": "43",
+    "memFree": "57",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "14.084986",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "95",
+    "ip": "192.168.130.16",
+    "cpu": "39",
+    "memUsed": "43",
+    "memFree": "57",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "19.993855",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "96",
+    "ip": "192.168.130.16",
+    "cpu": "60",
+    "memUsed": "41",
+    "memFree": "59",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "10.581282",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "97",
+    "ip": "192.168.130.16",
+    "cpu": "49",
+    "memUsed": "40",
+    "memFree": "60",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.132932",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "98",
+    "ip": "192.168.130.16",
+    "cpu": "36",
+    "memUsed": "40",
+    "memFree": "60",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "18.50959",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "99",
+    "ip": "192.168.130.16",
+    "cpu": "64",
+    "memUsed": "41",
+    "memFree": "59",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.90211",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "100",
+    "ip": "192.168.130.16",
+    "cpu": "46",
+    "memUsed": "42",
+    "memFree": "58",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.977811",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "101",
+    "ip": "192.168.130.16",
+    "cpu": "46",
+    "memUsed": "41",
+    "memFree": "59",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "12.914696",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "102",
+    "ip": "192.168.130.16",
+    "cpu": "57",
+    "memUsed": "41",
+    "memFree": "59",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "18.488174",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "103",
+    "ip": "192.168.130.16",
+    "cpu": "41",
+    "memUsed": "41",
+    "memFree": "59",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "13.9174595",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "104",
+    "ip": "192.168.130.16",
+    "cpu": "51",
+    "memUsed": "41",
+    "memFree": "59",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "10.043433",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "105",
+    "ip": "192.168.130.16",
+    "cpu": "47",
+    "memUsed": "41",
+    "memFree": "59",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.655215",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "106",
+    "ip": "192.168.130.16",
+    "cpu": "63",
+    "memUsed": "42",
+    "memFree": "58",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "16.928959",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "107",
+    "ip": "192.168.130.16",
+    "cpu": "42",
+    "memUsed": "40",
+    "memFree": "60",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "17.871292",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "108",
+    "ip": "192.168.130.16",
+    "cpu": "48",
+    "memUsed": "41",
+    "memFree": "59",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "16.223423",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "109",
+    "ip": "192.168.130.16",
+    "cpu": "48",
+    "memUsed": "43",
+    "memFree": "57",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "15.661286",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "110",
+    "ip": "192.168.130.16",
+    "cpu": "60",
+    "memUsed": "40",
+    "memFree": "60",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "15.186235",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "111",
+    "ip": "192.168.130.16",
+    "cpu": "48",
+    "memUsed": "40",
+    "memFree": "60",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "19.92641",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "112",
+    "ip": "192.168.130.16",
+    "cpu": "54",
+    "memUsed": "43",
+    "memFree": "57",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "19.289385",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "113",
+    "ip": "192.168.130.16",
+    "cpu": "40",
+    "memUsed": "42",
+    "memFree": "58",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "17.18695",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "114",
+    "ip": "192.168.130.16",
+    "cpu": "58",
+    "memUsed": "42",
+    "memFree": "58",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "13.932779",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "115",
+    "ip": "192.168.130.16",
+    "cpu": "61",
+    "memUsed": "43",
+    "memFree": "57",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "116",
+    "ip": "192.168.130.16",
+    "cpu": "38",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "117",
+    "ip": "192.168.130.16",
+    "cpu": "41",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "118",
+    "ip": "192.168.130.16",
+    "cpu": "41",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "119",
+    "ip": "192.168.130.16",
+    "cpu": "35",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "120",
+    "ip": "192.168.130.16",
+    "cpu": "35",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "121",
+    "ip": "192.168.130.16",
+    "cpu": "36",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "122",
+    "ip": "192.168.130.16",
+    "cpu": "42",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "123",
+    "ip": "192.168.130.16",
+    "cpu": "36",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "124",
+    "ip": "192.168.130.16",
+    "cpu": "44",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "125",
+    "ip": "192.168.130.16",
+    "cpu": "37",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "126",
+    "ip": "192.168.130.16",
+    "cpu": "40",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "127",
+    "ip": "192.168.130.16",
+    "cpu": "36",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "128",
+    "ip": "192.168.130.16",
+    "cpu": "40",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "129",
+    "ip": "192.168.130.16",
+    "cpu": "40",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "130",
+    "ip": "192.168.130.16",
+    "cpu": "42",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "131",
+    "ip": "192.168.130.16",
+    "cpu": "41",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "132",
+    "ip": "192.168.130.16",
+    "cpu": "41",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "133",
+    "ip": "192.168.130.16",
+    "cpu": "39",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "134",
+    "ip": "192.168.130.16",
+    "cpu": "42",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "135",
+    "ip": "192.168.130.16",
+    "cpu": "42",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "136",
+    "ip": "192.168.130.16",
+    "cpu": "42",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "137",
+    "ip": "192.168.130.16",
+    "cpu": "36",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "138",
+    "ip": "192.168.130.16",
+    "cpu": "43",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "139",
+    "ip": "192.168.130.16",
+    "cpu": "38",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "140",
+    "ip": "192.168.130.16",
+    "cpu": "44",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "141",
+    "ip": "192.168.130.16",
+    "cpu": "40",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "142",
+    "ip": "192.168.130.16",
+    "cpu": "44",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "143",
+    "ip": "192.168.130.16",
+    "cpu": "44",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "144",
+    "ip": "192.168.130.16",
+    "cpu": "41",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "145",
+    "ip": "192.168.130.16",
+    "cpu": "35",
+    "memUsed": "31",
+    "memFree": "69",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "146",
+    "ip": "192.168.130.16",
+    "cpu": "42",
+    "memUsed": "33",
+    "memFree": "67",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "147",
+    "ip": "192.168.130.16",
+    "cpu": "44",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "148",
+    "ip": "192.168.130.16",
+    "cpu": "43",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "149",
+    "ip": "192.168.130.16",
+    "cpu": "41",
+    "memUsed": "32",
+    "memFree": "68",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}, {
+    "time": "150",
+    "ip": "192.168.130.16",
+    "cpu": "43",
+    "memUsed": "30",
+    "memFree": "70",
+    "netSendSpeed": "0.0025",
+    "netRecvSpedd": "11.022471",
+    "diskWriteSpeed": "",
+    "diskReadSpeed": ""
+}]

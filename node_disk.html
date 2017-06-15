@@ -4,8 +4,12 @@
     <meta charset="utf-8">
 </head>
 <body style="height: 100%; margin: 0">
-<div id="container" style="height: 30%;"> </div>
-<div id="container2" style="height: 30%; width:40%"> </div>
+
+<div style=" position:relative; width: 1000px;height:400px;">
+<div id="container" style="width: 600px;height: 400px; position: absolute;left:30px;top: 10px"> </div>
+<div id="container2" style="width: 600px;height: 400px; position: absolute;left:630px;top: 10px"> </div>
+</div>
+
 <div id="container3" style="height: 30%"> </div>
 <div id="container4" style="height: 30%"> </div>
 <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
@@ -98,32 +102,32 @@
                 },
                 data: time
             },
-            {
-                type: 'category',
-                axisTick: {
-                    alignWithLabel: true
-                },
-                axisLine: {
-                    onZero: false,
-                    lineStyle: {
-                        color: colors[1]
-                    }
-                },
-                data: time
-            },
-            {
-                type: 'category',
-                axisTick: {
-                    alignWithLabel: true
-                },
-                axisLine: {
-                    onZero: false,
-                    lineStyle: {
-                        color: colors[2]
-                    }
-                },
-                data: time
-            }
+//            {
+//                type: 'category',
+//                axisTick: {
+//                    alignWithLabel: true
+//                },
+//                axisLine: {
+//                    onZero: false,
+//                    lineStyle: {
+//                        color: colors[1]
+//                    }
+//                },
+//                data: time
+//            },
+//            {
+//                type: 'category',
+//                axisTick: {
+//                    alignWithLabel: true
+//                },
+//                axisLine: {
+//                    onZero: false,
+//                    lineStyle: {
+//                        color: colors[2]
+//                    }
+//                },
+//                data: time
+//            }
         ],
         yAxis: [
             {
@@ -144,18 +148,18 @@
                 smooth: true,
                 data: normal15_disw
             },
-            {
-                name: '16节点磁盘读',
-                type: 'line',
-                smooth: true,
-                data: normal16_disr
-            },
-            {
-                name: '16节点磁盘写',
-                type: 'line',
-                smooth: true,
-                data: normal16_disw
-            }
+//            {
+//                name: '16节点磁盘读',
+//                type: 'line',
+//                smooth: true,
+//                data: normal16_disr
+//            },
+//            {
+//                name: '16节点磁盘写',
+//                type: 'line',
+//                smooth: true,
+//                data: normal16_disw
+//            }
         ]
     };
 

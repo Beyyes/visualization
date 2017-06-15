@@ -219,17 +219,19 @@
     
 
     setInterval(function () {
-        if (count < tmpl.length) {
-            // if (tmpl[count].source == '节点2') {
-            //     nodes[0].symbolSize += 20;
-            //     //tmpl[count].lineStyle.normal.width = 10;
-            //     links.push(tmpl[count]);
-            // }
-            //tmpl[count].lineStyle.normal.push({color:'#f27322'});
-            nodes[tmpl[count].target].symbolSize += 20;
-            links.push(tmpl[count]);
+        for (var i = 0;i < 1;i++) {
+            if (count < tmpl.length) {
+                // if (tmpl[count].source == '节点2') {
+                //     nodes[0].symbolSize += 20;
+                //     //tmpl[count].lineStyle.normal.width = 10;
+                //     links.push(tmpl[count]);
+                // }
+                //tmpl[count].lineStyle.normal.push({color:'#f27322'});
+                nodes[tmpl[count].target].symbolSize += 20;
+                links.push(tmpl[count]);
+            }
+            count++;
         }
-        count ++;
 
         myChart.setOption({
             series: [{data: nodes, links:links}]
