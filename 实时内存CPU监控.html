@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+    <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+<div id="container_cpu_memory" style="height: 100%"></div>
+<!--<div style=" position:relative; width: 1000px;height:400px;">-->
+<!--<div id="container15_net" style="width: 380px;height: 300px; position: absolute;left:10px;top: 10px"> </div>-->
+<!--<div id="container16_net" style="width: 380px;height: 300px; position: absolute;left:410px;top: 10px"> </div>-->
+    <!--<div id="container17_net" style="width: 380px;height: 300px; position: absolute;left:810px;top: 10px"> </div>-->
+<!--</div>-->
+<!--<div id="container15_net" style="height: 30%"></div>-->
+<!--<div id="container16_net" style="height: 30%"></div>-->
+<!--<div id="container3" style="height: 30%"></div>-->
+<!--<div id="container4" style="height: 30%"></div>-->
+
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+<script type="text/javascript"
+        src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./data/mr/192.168.130.15.js"></script>
+<script type="text/javascript" src="./data/mr/192.168.130.16.js"></script>
+<script type="text/javascript" src="./data/mr/192.168.130.17.js"></script>
+<script type="text/javascript" src="./data/mr/192.168.130.18.js"></script>
+<script type="text/javascript" src="./data/mr/192.168.130.19.js"></script>
+<script type="text/javascript">
+
+    var range = 100;
+
+    var jsondata15_cpu = [];
+    var jsondata15_memory = [];
+
+    var jsondata16_cpu = [];
+    var jsondata16_memory = [];
+
+    var jsondata17_cpu = [];
+    var jsondata17_memory = [];
+
+    var idx = 0;
+    var time = [];
+
+    for (idx  = 0;idx < range; idx++) {
+        time.push(idx);
+        jsondata15_cpu.push(mr15[idx].cpu);
+        jsondata15_memory.push(mr15[idx].memUsed);
+
+        jsondata16_cpu.push(mr16[idx].cpu);
+        jsondata16_memory.push(mr16[idx].memUsed);
+
+        jsondata17_cpu.push(mr17[idx].cpu);
+        jsondata17_memory.push(mr17[idx].memUsed);
+    }
+
+    var dom = document.getElementById("container_cpu_memory");
+    var myChart = echarts.init(dom);
+    option = null;
+
+    var x1 = '10%', x2 = '52%', x3 = '67%';
+    var y1 = '7%', y2 = '37%', y3 = '67%';
+    var height = '25%', width = '36%';
+    option = {
+        title: {
+            text: '内存、CPU实时数据可视化',
+            x: 'center',
+            y: 0
+        },
+        grid: [
+            {x: x1, y: y1, width: width, height: height},
+            {x: x2, y: y1, width: width, height: height},
+            {x: x1, y: y2, width: width, height: height},
+            {x: x2, y: y2, width: width, height: height},
+            {x: x1, y: y3, width: width, height: height},
+            {x: x2, y: y3, width: width, height: height}
+        ],
+        tooltip: {
+            formatter: 'Group {a}: ({c})'
+        },
+        xAxis: [
+            {
+                gridIndex: 0,
+                splitLine: {show: false},
+                //type: 'time',
+                name: 'time',
+                data: time
+            },
+            {
+                gridIndex: 1,
+                //type: 'time',
+                splitLine: {show: false},
+                name: 'time',
+                data: time
+            },
+            {
+                gridIndex: 2,
+                //type: 'time',
+                splitLine: {show: false},
+                name: 'time',
+                data: time
+            },
+            {
+                gridIndex: 3,
+                //type: 'time',
+                splitLine: {show: false},
+                name: 'time',
+                data: time
+            },
+            {
+                gridIndex: 4,
+                splitLine: {show: false},
+                name: 'time',
+                data: time
+            },
+            {
+                gridIndex: 5,
+                splitLine: {show: false},
+                name: 'time',
+                data: time
+            }
+        ],
+        yAxis: [
+            {
+                gridIndex: 0,
+                type: 'value',
+                boundaryGap: [0, '100%'],
+                splitLine: {
+                    show: false
+                },
+                max: 100,
+                name: 'cpu'
+            },
+            {
+                gridIndex: 1,
+                type: 'value',
+                boundaryGap: [0, '100%'],
+                splitLine: {
+                    show: false
+                },
+                max: 100,
+                name: 'memory'
+            },
+            {
+                gridIndex: 2,
+                type: 'value',
+                boundaryGap: [0, '100%'],
+                splitLine: {
+                    show: false
+                },
+                max: 100,
+                name: 'cpu'
+            },
+            {
+                gridIndex: 3,
+                type: 'value',
+                boundaryGap: [0, '100%'],
+                splitLine: {
+                    show: false
+                },
+                max: 100,
+                name: 'memory'
+            },
+            {
+                name: 'cpu',
+                gridIndex: 4,
+                type: 'value',
+                boundaryGap: [0, '100%'],
+                max: 100,
+                splitLine: {
+                    show: false
+                }
+            },
+            {
+                name: 'memory',
+                gridIndex: 5,
+                type: 'value',
+                max: 100,
+                boundaryGap: [0, '100%'],
+                splitLine: {
+                    show: false
+                }
+            }
+        ],
+        visualMap: {
+            top: 10,
+            right: 10,
+            pieces: [{
+                gt: 0,
+                lte: 30,
+                color: '#096'
+            }, {
+                gt: 31,
+                lte: 50,
+                color: '#ff9933'
+            },  {
+                gt: 51,
+                color: '#7e0023'
+            }],
+            outOfRange: {
+                color: '#999'
+            }
+        },
+        series: [
+            {
+                name: '哈哈',
+                type: 'line',
+                xAxisIndex: 0,
+                yAxisIndex: 0,
+                data: jsondata15_cpu,
+                markLine: {
+                    silent: true,
+                    data: [
+                    {
+                        yAxis: 40
+                    }, {
+                        yAxis: 80
+                    }]
+                },
+                showSymbol: false,
+                hoverAnimation: false
+            },
+            {
+                name: '2',
+                type: 'line',
+                xAxisIndex: 1,
+                yAxisIndex: 1,
+                data: jsondata15_memory,
+                markLine: {
+                    silent: true,
+                    data: [
+                        {
+                            yAxis: 40
+                        }, {
+                            yAxis: 80
+                        }]
+                }
+            },
+            {
+                name: '3',
+                type: 'line',
+                xAxisIndex: 2,
+                yAxisIndex: 2,
+                data: jsondata16_cpu,
+                markLine: {
+                    silent: true,
+                    data: [
+                        {
+                            yAxis: 40
+                        }, {
+                            yAxis: 80
+                        }]
+                }
+            },
+            {
+                name: '4',
+                type: 'line',
+                showSymbol: false,
+                hoverAnimation: false,
+                xAxisIndex: 3,
+                yAxisIndex: 3,
+                data: jsondata16_memory,
+                markLine: {
+                    silent: true,
+                    data: [
+                        {
+                            yAxis: 40
+                        }, {
+                            yAxis: 80
+                        }]
+                },
+            },
+            {
+                name: '5',
+                type: 'line',
+                showSymbol: false,
+                hoverAnimation: false,
+                xAxisIndex: 4,
+                yAxisIndex: 4,
+                data: jsondata17_cpu,
+                markLine: {
+                    silent: true,
+                    data: [
+                        {
+                            yAxis: 40
+                        }, {
+                            yAxis: 80
+                        }]
+                },
+            },
+            {
+                name: '6',
+                type: 'line',
+                showSymbol: false,
+                hoverAnimation: false,
+                xAxisIndex: 5,
+                yAxisIndex: 5,
+                data: jsondata17_memory,
+                markLine: {
+                    silent: true,
+                    data: [
+                        {
+                            yAxis: 40
+                        }, {
+                            yAxis: 80
+                        }]
+                },
+            }
+        ]
+    };
+
+    setInterval(function () {
+
+        for (var i = 0; i < 3; i++) {
+            time.shift();
+            time.push(idx);
+            jsondata15_cpu.shift();
+            jsondata15_memory.shift();
+            jsondata15_cpu.push(mr15[idx].cpu);
+            jsondata15_memory.push(mr15[idx].memUsed);
+
+            jsondata16_cpu.shift();
+            jsondata16_memory.shift();
+            jsondata16_cpu.push(mr16[idx].cpu);
+            jsondata16_memory.push(mr16[idx].memUsed);
+
+            jsondata17_cpu.shift();
+            jsondata17_memory.shift();
+            jsondata17_cpu.push(mr17[idx].cpu);
+            jsondata17_memory.push(mr17[idx].memUsed);
+            idx++;
+        }
+
+        myChart.setOption({
+            xAxis: [{data: time},{data: time},{data: time},{data: time},{data: time},{data: time}],
+            series: [{data: jsondata15_cpu}, {data: jsondata16_cpu}, {data: jsondata17_cpu}, {data: jsondata15_memory}, {data: jsondata16_memory}, {data: jsondata17_memory}]
+        });
+    }, 1000);
+
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+</script>
+
+
+
+</body>
+</html>
