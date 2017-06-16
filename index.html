@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Light Bootstrap Dashboard by Creative Tim</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="assets/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+</head>
+
+
+<body style="height: 100%; margin: 0">
+<div class="wrapper">
+    <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
+
+        <!--
+
+            Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+            Tip 2: you can also add an image using data-image tag
+
+        -->
+
+        <div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="http://www.creative-tim.com" class="simple-text">
+                    Creative Tim
+                </a>
+            </div>
+
+            <ul class="nav">
+                <li class="active">
+                    <a href="index.html">
+                        <i class="pe-7s-graph"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="node_history_analysis.html">
+                        <i class="pe-7s-note2"></i>
+                        <p>History</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="graph-size-status.html">
+                        <i class="pe-7s-map"></i>
+                        <p>Graph</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-panel">
+        <nav class="navbar navbar-default navbar-fixed">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Dashboard</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-dashboard"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">内存、CPU实时时序数据可视化</h4>
+                            </div>
+                            <div class="content">
+                                <div id="container" style="height: 200px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">网络传输</h4>
+                            </div>
+                            <div class="content">
+                                <div id="container2" style="height: 150px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">磁盘读写</h4>
+                            </div>
+                            <div class="content">
+                                <div id="container4" style="height: 200px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+<script type="text/javascript"
+        src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+<script type="text/javascript" src="./jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./data/mr/192.168.130.15.js"></script>
+<script type="text/javascript" src="./data/mr/192.168.130.16.js"></script>
+<script type="text/javascript" src="./data/mr/192.168.130.17.js"></script>
+<script type="text/javascript" src="./data/mr/192.168.130.18.js"></script>
+<script type="text/javascript" src="./data/mr/192.168.130.19.js"></script>
+<script type="text/javascript">
+
+    var range = 100;
+
+    var jsondata15_cpu = [];
+    var jsondata15_memory = [];
+
+    var jsondata16_cpu = [];
+    var jsondata16_memory = [];
+
+    var jsondata17_cpu = [];
+    var jsondata17_memory = [];
+
+    var idx = 0;
+    var time = [];
+
+    for (idx  = 0;idx < range; idx++) {
+        time.push(idx);
+        jsondata15_cpu.push(mr15[idx].cpu);
+        jsondata15_memory.push(mr15[idx].memUsed);
+
+        jsondata16_cpu.push(mr16[idx].cpu);
+        jsondata16_memory.push(mr16[idx].memUsed);
+
+        jsondata17_cpu.push(mr17[idx].cpu);
+        jsondata17_memory.push(mr17[idx].memUsed);
+    }
+
+    var dom = document.getElementById("container");
+    var myChart = echarts.init(dom);
+    option = null;
+
+    var x1 = '3%', x2 = '35%', x3 = '67%';
+    var y1 = '17%', y2 = '60%', y3 = '68%';
+    var height = '25%', width = '22%';
+    option = {
+        title: {
+//            text: '内存、CPU实时时序数据可视化',
+            x: 'center',
+            y: 0
+        },
+        grid: [
+            {x: x1, y: y1, width: width, height: height},
+            {x: x2, y: y1, width: width, height: height},
+            {x: x3, y: y1, width: width, height: height},
+            {x: x1, y: y2, width: width, height: height},
+            {x: x2, y: y2, width: width, height: height},
+            {x: x3, y: y2, width: width, height: height}
+        ],
+        tooltip: {
+            formatter: 'Group {a}: ({c})'
+        },
+        xAxis: [
+            {
+                gridIndex: 0,
+                splitLine: {show: false},
+                //type: 'time',
+                name: 'time',
+                data: time
+            },
+            {
+                gridIndex: 1,
+                //type: 'time',
+                splitLine: {show: false},
+                name: 'time',
+                data: time
+            },
+            {
+                gridIndex: 2,
+                //type: 'time',
+                splitLine: {show: false},
+                name: 'time',
+                data: time
+            },
+            {
+                gridIndex: 3,
+                //type: 'time',
+                splitLine: {show: false},
+                name: 'time',
+                data: time
+            },
+            {
+                gridIndex: 4,
+                splitLine: {show: false},
+                name: 'time',
+                data: time
+            },
+            {
+                gridIndex: 5,
+                splitLine: {show: false},
+                name: 'time',
+                data: time
+            }
+        ],
+        yAxis: [
+            {
+                gridIndex: 0,
+                type: 'value',
+                boundaryGap: [0, '100%'],
+                splitLine: {
+                    show: false
+                },
+                max: 100,
+                name: 'cpu'
+            },
+            {
+                gridIndex: 1,
+                type: 'value',
+                boundaryGap: [0, '100%'],
+                splitLine: {
+                    show: false
+                },
+                max: 100,
+                name: 'cpu'
+            },
+            {
+                gridIndex: 2,
+                type: 'value',
+                boundaryGap: [0, '100%'],
+                splitLine: {
+                    show: false
+                },
+                max: 100,
+                name: 'cpu'
+            },
+            {
+                gridIndex: 3,
+                type: 'value',
+                boundaryGap: [0, '100%'],
+                splitLine: {
+                    show: false
+                },
+                max: 100,
+                name: 'memory'
+            },
+            {
+                name: 'memory',
+                gridIndex: 4,
+                type: 'value',
+                boundaryGap: [0, '100%'],
+                max: 100,
+                splitLine: {
+                    show: false
+                }
+            },
+            {
+                name: 'memory',
+                gridIndex: 5,
+                type: 'value',
+                max: 100,
+                boundaryGap: [0, '100%'],
+                splitLine: {
+                    show: false
+                }
+            }
+        ],
+        visualMap: {
+            top: 10,
+            right: 10,
+            pieces: [{
+                gt: 0,
+                lte: 30,
+                color: '#096'
+            }, {
+                gt: 31,
+                lte: 50,
+                color: '#ff9933'
+            },  {
+                gt: 51,
+                color: '#7e0023'
+            }],
+            outOfRange: {
+                color: '#999'
+            }
+        },
+        series: [
+            {
+                name: '哈哈',
+                type: 'line',
+                xAxisIndex: 0,
+                yAxisIndex: 0,
+                data: jsondata15_cpu,
+                markLine: {
+                    silent: true,
+                    data: [
+                    {
+                        yAxis: 40
+                    }, {
+                        yAxis: 80
+                    }]
+                },
+                showSymbol: false,
+                hoverAnimation: false
+            },
+            {
+                name: '2',
+                type: 'line',
+                xAxisIndex: 1,
+                yAxisIndex: 1,
+                data: jsondata16_cpu,
+                markLine: {
+                    silent: true,
+                    data: [
+                        {
+                            yAxis: 40
+                        }, {
+                            yAxis: 80
+                        }]
+                }
+            },
+            {
+                name: '3',
+                type: 'line',
+                xAxisIndex: 2,
+                yAxisIndex: 2,
+                data: jsondata17_cpu,
+                markLine: {
+                    silent: true,
+                    data: [
+                        {
+                            yAxis: 40
+                        }, {
+                            yAxis: 80
+                        }]
+                }
+            },
+            {
+                name: '4',
+                type: 'line',
+                showSymbol: false,
+                hoverAnimation: false,
+                xAxisIndex: 3,
+                yAxisIndex: 3,
+                data: jsondata15_memory,
+                markLine: {
+                    silent: true,
+                    data: [
+                        {
+                            yAxis: 40
+                        }, {
+                            yAxis: 80
+                        }]
+                },
+            },
+            {
+                name: '5',
+                type: 'line',
+                showSymbol: false,
+                hoverAnimation: false,
+                xAxisIndex: 4,
+                yAxisIndex: 4,
+                data: jsondata16_memory,
+                markLine: {
+                    silent: true,
+                    data: [
+                        {
+                            yAxis: 40
+                        }, {
+                            yAxis: 80
+                        }]
+                },
+            },
+            {
+                name: '6',
+                type: 'line',
+                showSymbol: false,
+                hoverAnimation: false,
+                xAxisIndex: 5,
+                yAxisIndex: 5,
+                data: jsondata17_memory,
+                markLine: {
+                    silent: true,
+                    data: [
+                        {
+                            yAxis: 40
+                        }, {
+                            yAxis: 80
+                        }]
+                },
+            }
+        ]
+    };
+
+    setInterval(function () {
+
+        for (var i = 0; i < 3; i++) {
+            time.shift();
+            time.push(idx);
+            jsondata15_cpu.shift();
+            jsondata15_memory.shift();
+            jsondata15_cpu.push(mr15[idx].cpu);
+            jsondata15_memory.push(mr15[idx].memUsed);
+
+            jsondata16_cpu.shift();
+            jsondata16_memory.shift();
+            jsondata16_cpu.push(mr16[idx].cpu);
+            jsondata16_memory.push(mr16[idx].memUsed);
+
+            jsondata17_cpu.shift();
+            jsondata17_memory.shift();
+            jsondata17_cpu.push(mr17[idx].cpu);
+            jsondata17_memory.push(mr17[idx].memUsed);
+            idx++;
+        }
+
+        myChart.setOption({
+            xAxis: [{data: time},{data: time},{data: time},{data: time},{data: time},{data: time}],
+            series: [{data: jsondata15_cpu}, {data: jsondata16_cpu}, {data: jsondata17_cpu}, {data: jsondata15_memory}, {data: jsondata16_memory}, {data: jsondata17_memory}]
+        });
+    }, 1000);
+
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+</script>
+
+<script type="text/javascript">
+
+    var dom2 = document.getElementById("container2");
+    var myChart2 = echarts.init(dom2);
+    var option2 = null;
+
+    var jsondata15_nets = [];
+    var jsondata15_netr = [];
+
+    var jsondata16_nets = [];
+    var jsondata16_netr = [];
+
+    var jsondata17_nets = [];
+    var jsondata17_netr = [];
+
+    var index2 = 0;
+    var time2 = [];
+
+    for (index2  = 0;index2 < range; index2++) {
+        time2.push(index2);
+        jsondata15_nets.push(mr15[index2].netSendSpeed);
+        jsondata15_netr.push(mr15[index2].netRecvSpedd);
+
+        jsondata16_nets.push(mr16[index2].netSendSpeed);
+        jsondata16_netr.push(mr16[index2].netRecvSpedd);
+
+        jsondata17_nets.push(mr17[index2].netSendSpeed);
+        jsondata17_netr.push(mr17[index2].netRecvSpedd);
+    }
+
+    var height = '50%', width = '25%';
+    option2 = {
+        title: {
+//            text: '网络传输',
+            x: 'center',
+            y: 0
+        },
+        grid: [
+            {x: x1, y: y1, width: width, height: height},
+            {x: x2, y: y1, width: width, height: height},
+            {x: x3, y: y1, width: width, height: height}
+        ],
+        tooltip: {
+            formatter: 'Group {a}: ({c})'
+        },
+        xAxis: [
+            {
+                gridIndex: 0,
+                splitLine: {show: false},
+                name: 'time',
+                type: 'category',
+                data: time2
+            },
+            {
+                gridIndex: 1,
+                splitLine: {show: false},
+                name: 'time',
+                data: time2
+            },
+            {
+                gridIndex: 2,
+                splitLine: {show: false},
+                name: 'time',
+                data: time2
+            }
+        ],
+        yAxis: [
+            {
+                gridIndex: 0,
+                type: 'value',
+                boundaryGap: [0, '100%'],
+                max:0.7,
+                splitLine: {
+                    show: false
+                },
+                name: 'net'
+            },
+            {
+                gridIndex: 1,
+                type: 'value',
+                boundaryGap: [0, '100%'],
+                splitLine: {
+                    show: false
+                },
+                name: 'net'
+            },
+            {
+                gridIndex: 2,
+                type: 'value',
+                boundaryGap: [0, '100%'],
+                splitLine: {
+                    show: false
+                },
+                name: 'net'
+            }
+        ],
+        series: [
+            {
+                type: 'line',
+                xAxisIndex: 0,
+                yAxisIndex: 0,
+                data: jsondata15_netr,
+                max : 0.3,
+                markLine: {
+                    silent: true,
+                    data: [
+                        {
+                            yAxis: 0.001
+                        }, {
+                            yAxis: 0.003
+                        }]
+                },
+                showSymbol: false,
+                hoverAnimation: false
+            },
+            {
+                type: 'line',
+                xAxisIndex: 0,
+                yAxisIndex: 0,
+                max:0.3,
+                data: jsondata15_nets,
+                markLine: {
+                    silent: true,
+                    data: [
+                        {
+                            yAxis: 0.002
+                        }, {
+                            yAxis: 0.005
+                        }]
+                },
+                showSymbol: false,
+                hoverAnimation: false
+            },
+            {
+                type: 'line',
+                xAxisIndex: 1,
+                yAxisIndex: 1,
+                data: jsondata16_netr,
+                markLine: {
+                    silent: true,
+                    data: [
+                        {
+                            yAxis: 40
+                        }, {
+                            yAxis: 80
+                        }]
+                }
+            },
+            {
+                type: 'line',
+                xAxisIndex: 2,
+                yAxisIndex: 2,
+                data: jsondata17_netr,
+                markLine: {
+                    silent: true,
+                    data: [
+                        {
+                            yAxis: 40
+                        }, {
+                            yAxis: 80
+                        }]
+                }
+            }
+        ]
+    };
+
+    setInterval(function () {
+
+        for (var i = 0; i < 3; i++) {
+            time2.shift();
+            time2.push(index2);
+
+            jsondata15_nets.shift();
+            jsondata15_nets.push(mr15[index2].netSendSpeed);
+            jsondata15_netr.shift();
+            jsondata15_netr.push(mr15[index2].netRecvSpedd);
+
+            jsondata16_nets.push();
+            jsondata16_netr.shift();
+            jsondata16_netr.push(mr16[index2].netRecvSpedd);
+
+            jsondata17_nets.push();
+            jsondata17_netr.shift();
+            jsondata17_netr.push(mr17[index2].netRecvSpedd);
+
+            index2++;
+        }
+
+        myChart2.setOption({
+            xAxis: [{data: time2},{data: time2},{data: time2},{data: time2}],
+            series: [{data: jsondata15_netr},{data: jsondata15_nets} ,{data: jsondata16_netr}, {data: jsondata17_netr}]
+        });
+    }, 1000);
+
+    if (option2 && typeof option2 === "object") {
+        myChart2.setOption(option2, true);
+    }
+</script>
+
+<script type="text/javascript">
+
+    var dom3 = document.getElementById("container4");
+    var myChart4 = echarts.init(dom3);
+    var option4 = null;
+
+    var jsondata15_diskw = [];
+    var jsondata15_diskr = [];
+
+    var jsondata16_diskw = [];
+    var jsondata16_diskr = [];
+
+    var jsondata17_nets = [];
+    var jsondata17_netr = [];
+
+    var index2 = 0;
+    var time2 = [];
+
+    for (index2  = 0;index2 < range; index2++) {
+        time2.push(index2);
+        jsondata15_diskw.push(mr15[index2].diskWriteSpeed);
+        jsondata15_diskr.push(-mr15[index2].diskReadSpeed-100);
+
+        jsondata16_diskw.push(mr16[index2].diskWriteSpeed);
+        jsondata16_diskr.push(mr16[index2].diskReadSpeed);
+
+        jsondata17_nets.push(mr17[index2].diskWriteSpeed);
+        jsondata17_netr.push(mr17[index2].diskReadSpeed);
+    }
+
+    option4 = {
+        title: {
+//            text: '磁盘读写',
+            x: 'center',
+            y: 10
+        },
+        tooltip: {
+            formatter: 'Group {a}: ({c})'
+        },
+        xAxis: [
+            {
+                splitLine: {show: false},
+                name: 'time',
+                type: 'category',
+                data: time2
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                boundaryGap: [0, '100%'],
+                splitLine: {
+                    show: false
+                },
+                name: 'net',
+                //inverse: true
+            }
+        ],
+        series: [
+            {
+                type: 'line',
+                yAxisIndex: 0,
+                data: jsondata15_diskw,
+                showSymbol: false,
+                hoverAnimation: false
+            },
+            {
+                type: 'line',
+                yAxisIndex: 0,
+                data: jsondata15_diskr,
+                showSymbol: false,
+                hoverAnimation: false
+            }
+        ]
+    };
+
+//    setInterval(function () {
+//
+//        for (var i = 0; i < 3; i++) {
+//            time2.shift();
+//            time2.push(index2);
+//
+//            jsondata15_nets.shift();
+//            jsondata15_nets.push(mr15[index2].netSendSpeed);
+//            jsondata15_netr.shift();
+//            jsondata15_netr.push(mr15[index2].netRecvSpedd);
+//
+//            jsondata16_nets.push();
+//            jsondata16_netr.shift();
+//            jsondata16_netr.push(mr16[index2].netRecvSpedd);
+//
+//            jsondata17_nets.push();
+//            jsondata17_netr.shift();
+//            jsondata17_netr.push(mr17[index2].netRecvSpedd);
+//
+//            index2++;
+//        }
+//
+//        myChart3.setOption({
+//            xAxis: [{data: time2},{data: time2},{data: time2},{data: time2}],
+//            series: [{data: jsondata15_netr},{data: jsondata15_nets} ,{data: jsondata16_netr}, {data: jsondata17_netr}]
+//        });
+//    }, 1000);
+
+    if (option4 && typeof option4 === "object") {
+        myChart4.setOption(option4, true);
+    }
+</script>
+</div>
+
+</body>
+<!--   Core JS Files   -->
+<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!--  Checkbox, Radio & Switch Plugins -->
+<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
+
+<!--  Charts Plugin -->
+<script src="assets/js/chartist.min.js"></script>
+
+<!--  Notifications Plugin    -->
+<script src="assets/js/bootstrap-notify.js"></script>
+
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+<script src="assets/js/light-bootstrap-dashboard.js"></script>
+
+<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+<script src="assets/js/demo.js"></script>
+</html>
