@@ -47,24 +47,17 @@
             </div>
 
             <ul class="nav">
-                <li class="active">
-                    <a role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <li >
+                    <a href="index.html">
                         <i class="pe-7s-graph"></i>
-                        <p>Dashboard</p>
+                        <p>Memory&CPU</p>
                     </a>
-                    <div class="collapse" id="collapseExample">
-                        <ul class="nav-open">
-                            <li>
-                                <a href="index.html">内存与CPU
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index_disk.html">网络与磁盘
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
+                </li>
+                <li class="active">
+                    <a href="index_disk.html">
+                        <i class="pe-7s-graph1"></i>
+                        <p>Network&Disk</p>
+                    </a>
                 </li>
                 <li>
                     <a href="node_history_analysis.html">
@@ -116,25 +109,53 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="card">
-                            <div class="header">
-                                <h4 class="title">网络传输</h4>
-                            </div>
                             <div class="content">
-                                <div id="container2" style="height: 150px"></div>
+                                <div id="container15_net" style="height: 200px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="content">
+                                <div id="container15_disk" style="height: 200px"></div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="card">
-                            <div class="header">
-                                <h4 class="title">磁盘读写</h4>
-                            </div>
                             <div class="content">
-                                <div id="container4" style="height: 200px"></div>
+                                <div id="container16_net" style="height: 200px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="content">
+                                <div id="container16_disk" style="height: 200px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="content">
+                                <div id="container17_net" style="height: 200px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="content">
+                                <div id="container17_disk" style="height: 200px"></div>
                             </div>
                         </div>
                     </div>
@@ -142,18 +163,6 @@
             </div>
         </div>
 
-    </div>
-    <div style=" position:relative; width: 1000px;height:400px;">
-        <div id="container15_net" style="width: 580px;height: 300px; position: absolute;left:50px;top: 10px"> </div>
-        <div id="container15_disk" style="width: 580px;height: 300px; position: absolute;left:660px;top: 10px"> </div>
-    </div>
-    <div style=" position:relative; width: 1000px;height:400px;">
-        <div id="container16_net" style="width: 580px;height: 300px; position: absolute;left:50px;top: 10px"> </div>
-        <div id="container16_disk" style="width: 580px;height: 300px; position: absolute;left:660px;top: 10px"> </div>
-    </div>
-    <div style=" position:relative; width: 1000px;height:400px;">
-        <div id="container17_net" style="width: 580px;height: 300px; position: absolute;left:50px;top: 10px"> </div>
-        <div id="container17_disk" style="width: 580px;height: 300px; position: absolute;left:660px;top: 10px"> </div>
     </div>
     <!--<div id="container15_net" style="height: 30%"></div>-->
     <!--<div id="container16_net" style="height: 30%"></div>-->
