@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Light Bootstrap Dashboard by Creative Tim</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="assets/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+</head>
+
+
+<body style="height: 100%; margin: 0">
+<div class="wrapper">
+    <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
+
+        <!--
+
+            Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+            Tip 2: you can also add an image using data-image tag
+
+        -->
+
+        <div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="http://www.creative-tim.com" class="simple-text">
+                    Creative Tim
+                </a>
+            </div>
+
+            <ul class="nav">
+                <li class="active">
+                    <a role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="pe-7s-graph"></i>
+                        <p>Dashboard</p>
+                    </a>
+                    <div class="collapse" id="collapseExample">
+                        <ul class="nav-open">
+                            <li>
+                                <a href="index.html">内存与CPU
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index_disk.html">网络与磁盘
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li>
+                    <a href="node_history_analysis.html">
+                        <i class="pe-7s-note2"></i>
+                        <p>History</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="graph-size-status.html">
+                        <i class="pe-7s-map"></i>
+                        <p>Graph</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="cluster_disk.html">
+                        <i class="pe-7s-ball"></i>
+                        <p>Cluster</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-panel">
+        <nav class="navbar navbar-default navbar-fixed">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Dashboard</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-dashboard"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">网络传输</h4>
+                            </div>
+                            <div class="content">
+                                <div id="container2" style="height: 150px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">磁盘读写</h4>
+                            </div>
+                            <div class="content">
+                                <div id="container4" style="height: 200px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div style=" position:relative; width: 1000px;height:400px;">
+        <div id="container15_net" style="width: 580px;height: 300px; position: absolute;left:50px;top: 10px"> </div>
+        <div id="container15_disk" style="width: 580px;height: 300px; position: absolute;left:660px;top: 10px"> </div>
+    </div>
+    <div style=" position:relative; width: 1000px;height:400px;">
+        <div id="container16_net" style="width: 580px;height: 300px; position: absolute;left:50px;top: 10px"> </div>
+        <div id="container16_disk" style="width: 580px;height: 300px; position: absolute;left:660px;top: 10px"> </div>
+    </div>
+    <div style=" position:relative; width: 1000px;height:400px;">
+        <div id="container17_net" style="width: 580px;height: 300px; position: absolute;left:50px;top: 10px"> </div>
+        <div id="container17_disk" style="width: 580px;height: 300px; position: absolute;left:660px;top: 10px"> </div>
+    </div>
+    <!--<div id="container15_net" style="height: 30%"></div>-->
+    <!--<div id="container16_net" style="height: 30%"></div>-->
+    <!--<div id="container3" style="height: 30%"></div>-->
+    <!--<div id="container4" style="height: 30%"></div>-->
+
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+    <script type="text/javascript"
+            src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./data/mr/192.168.130.15.js"></script>
+    <script type="text/javascript" src="./data/mr/192.168.130.16.js"></script>
+    <script type="text/javascript" src="./data/mr/192.168.130.17.js"></script>
+    <script type="text/javascript" src="./data/mr/192.168.130.18.js"></script>
+    <script type="text/javascript" src="./data/mr/192.168.130.19.js"></script>
+
+
+    <script type="text/javascript">
+        var range = 100;
+        var myChart15net = echarts.init(document.getElementById("container15_net"));
+
+        var jsondata15_nets = [];
+        var jsondata15_netr = [];
+
+        var index15net = 0;
+        var time15net = [];
+
+        for (index15net  = 0;index15net < range; index15net++) {
+            time15net.push(index15net);
+            jsondata15_nets.push(mr15[index15net].netSendSpeed);
+            jsondata15_netr.push(-mr15[index15net].netRecvSpedd);
+        }
+
+        var option15net = {
+            legend: {
+                data: ['15节点网络传送', '15节点网络接收']
+            },
+//        title: {
+//            text: '网络',
+//            x: 'center',
+//            y: 0
+//        },
+            tooltip: {
+                formatter: 'Group {a}: ({c})'
+            },
+            xAxis: [
+                {
+                    splitLine: {show: false},
+                    name: 'time',
+                    data: time15net
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    boundaryGap: [0, '100%'],
+                    splitLine: {
+                        show: false
+                    },
+                    name: 'net'
+                },
+            ],
+            series: [
+                {
+                    name:'15节点网络传送',
+                    type: 'line',
+                    data: jsondata15_netr,
+                    showSymbol: false,
+                    hoverAnimation: false
+                },
+                {
+                    name:'15节点网络接收',
+                    type: 'line',
+                    data: jsondata15_nets,
+                    showSymbol: false,
+                    hoverAnimation: false
+                }
+            ]
+        };
+
+        setInterval(function () {
+
+            for (var i = 0; i < 2; i++) {
+                time15net.shift();
+                time15net.push(index15net);
+
+                jsondata15_nets.shift();
+                jsondata15_nets.push(mr15[index15net].netSendSpeed);
+                jsondata15_netr.shift();
+                jsondata15_netr.push(-mr15[index15net].netRecvSpedd);
+
+                index15net++;
+            }
+
+            myChart15net.setOption({
+                xAxis: [{data: time15net}],
+                series: [{data: jsondata15_netr},{data: jsondata15_nets}]
+            });
+        }, 1000);
+
+        if (option15net && typeof option15net === "object") {
+            myChart15net.setOption(option15net, true);
+        }
+    </script>
+
+    <script type="text/javascript">
+
+        var range = 100;
+        var myChart15disk = echarts.init(document.getElementById("container15_disk"));
+
+        var jsondata15_diskw = [];
+        var jsondata15_diskr = [];
+
+        var index15disk = 0;
+        var time15disk = [];
+
+        for (index15disk  = 0;index15disk < range; index15disk++) {
+            time15disk.push(index15disk);
+            jsondata15_diskw.push(mr15[index15disk].diskWriteSpeed);
+            jsondata15_diskr.push(-mr15[index15disk].diskReadSpeed);
+        }
+
+        var option15disk = {
+            legend: {
+                data: ['15节点磁盘读取', '15节点磁盘写入']
+            },
+            tooltip: {
+                formatter: 'Group {a}: ({c})'
+            },
+            xAxis: [
+                {
+                    splitLine: {show: false},
+                    name: 'time',
+                    data: time15disk
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    boundaryGap: [0, '100%'],
+                    splitLine: {
+                        show: false
+                    },
+                    name: 'disk'
+                },
+            ],
+            series: [
+                {
+                    name: '15节点磁盘读取',
+                    type: 'line',
+                    data: jsondata15_diskr,
+                    showSymbol: false,
+                    hoverAnimation: false
+                },
+                {
+                    name: '15节点磁盘写入',
+                    type: 'line',
+                    data: jsondata15_diskw,
+                    showSymbol: false,
+                    hoverAnimation: false
+                }
+            ]
+        };
+
+        setInterval(function () {
+
+            for (var i = 0; i < 2; i++) {
+                time15disk.shift();
+                time15disk.push(index15disk);
+
+                jsondata15_diskw.shift();
+                jsondata15_diskw.push(mr15[index15disk].diskWriteSpeed);
+                jsondata15_diskr.shift();
+                jsondata15_diskr.push(-mr15[index15disk].diskReadSpeed);
+
+                index15disk++;
+            }
+
+            myChart15disk.setOption({
+                xAxis: [{data: time15disk}],
+                series: [{data: jsondata15_diskr},{data: jsondata15_diskw}]
+            });
+        }, 1000);
+
+        if (option15disk && typeof option15disk === "object") {
+            myChart15disk.setOption(option15disk, true);
+        }
+    </script>
+
+    <script type="text/javascript">
+        var myChart16net = echarts.init(document.getElementById("container16_net"));
+
+        var time16net = [];
+        var jsondata16_nets = [];
+        var jsondata16_netr = [];
+
+        var index16net = 0;
+        for (index16net  = 0;index16net < range; index16net++) {
+            time16net.push(index16net);
+
+            jsondata16_nets.push(mr16[index16net].netSendSpeed);
+            jsondata16_netr.push(-mr16[index16net].netRecvSpedd);
+
+        }
+
+        var option16net = {
+            legend: {
+                data: ['16节点网络传送', '16节点网络接收']
+            },
+            tooltip: {
+                formatter: 'Group {a}: ({c})'
+            },
+            xAxis: [
+                {
+                    splitLine: {show: false},
+                    name: 'time',
+                    data: time16net
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    boundaryGap: [0, '100%'],
+                    splitLine: {
+                        show: false
+                    },
+                    name: 'net'
+                }
+            ],
+            series: [
+                {
+                    name:'16节点网络传送',
+                    type: 'line',
+                    data: jsondata16_netr,
+                    showSymbol: false,
+                    hoverAnimation: false
+                },
+                {
+                    name:'16节点网络接收',
+                    type: 'line',
+                    data: jsondata16_nets,
+                    showSymbol: false,
+                    hoverAnimation: false
+                }
+            ]
+        };
+
+        setInterval(function () {
+
+            for (var i = 0; i < 2; i++) {
+                time16net.shift();
+                time16net.push(index16net);
+
+                jsondata16_nets.shift();
+                jsondata16_nets.push(mr16[index16net].netSendSpeed);
+                jsondata16_netr.shift();
+                jsondata16_netr.push(-mr16[index16net].netRecvSpedd);
+
+                index16net++;
+            }
+
+            myChart16net.setOption({
+                xAxis: [{data: time16net}],
+                series: [{data: jsondata16_netr},{data: jsondata16_nets}]
+            });
+        }, 1000);
+
+        if (option16net && typeof option16net === "object") {
+            myChart16net.setOption(option16net, true);
+        }
+    </script>
+
+    <script type="text/javascript">
+
+        var range = 100;
+        var myChart16disk = echarts.init(document.getElementById("container16_disk"));
+
+        var jsondata16_diskw = [];
+        var jsondata16_diskr = [];
+
+        var index16disk = 0;
+        var time16disk = [];
+
+        for (index16disk  = 0;index16disk < range; index16disk++) {
+            time16disk.push(index16disk);
+            jsondata16_diskw.push(mr16[index16disk].diskWriteSpeed);
+            jsondata16_diskr.push(-mr16[index16disk].diskReadSpeed);
+        }
+
+        var option16disk = {
+            legend: {
+                data: ['16节点磁盘读取', '16节点磁盘写入']
+            },
+            tooltip: {
+                formatter: 'Group {a}: ({c})'
+            },
+            xAxis: [
+                {
+                    splitLine: {show: false},
+                    name: 'time',
+                    data: time16disk
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    boundaryGap: [0, '100%'],
+                    splitLine: {
+                        show: false
+                    },
+                    name: 'disk'
+                }
+            ],
+            series: [
+                {
+                    name: '16节点磁盘读取',
+                    type: 'line',
+                    data: jsondata16_diskr,
+                    showSymbol: false,
+                    hoverAnimation: false
+                },
+                {
+                    name: '16节点磁盘写入',
+                    type: 'line',
+                    data: jsondata16_diskw,
+                    showSymbol: false,
+                    hoverAnimation: false
+                }
+            ]
+        };
+
+        setInterval(function () {
+
+            for (var i = 0; i < 2; i++) {
+                time16disk.shift();
+                time16disk.push(index16disk);
+
+                jsondata16_diskw.shift();
+                jsondata16_diskw.push(mr16[index16disk].diskWriteSpeed);
+                jsondata16_diskr.shift();
+                jsondata16_diskr.push(-mr16[index16disk].diskReadSpeed);
+
+                index16disk++;
+            }
+
+            myChart16disk.setOption({
+                xAxis: [{data: time16disk}],
+                series: [{data: jsondata16_diskr},{data: jsondata16_diskw}]
+            });
+        }, 1000);
+
+        if (option16disk && typeof option16disk === "object") {
+            myChart16disk.setOption(option16disk, true);
+        }
+    </script>
+
+    <script type="text/javascript">
+        var range = 100;
+        var myChart17net = echarts.init(document.getElementById("container17_net"));
+
+        var jsondata17_nets = [];
+        var jsondata17_netr = [];
+
+        var index17net = 0;
+        var time17net = [];
+
+        for (index17net  = 0;index17net < range; index17net++) {
+            time17net.push(index17net);
+            jsondata17_nets.push(mr17[index17net].netSendSpeed);
+            jsondata17_netr.push(-mr17[index17net].netRecvSpedd);
+        }
+
+        var option17net = {
+            legend: {
+                data: ['17节点网络传送', '17节点网络接收']
+            },
+//        title: {
+//            text: '网络',
+//            x: 'center',
+//            y: 0
+//        },
+            tooltip: {
+                formatter: 'Group {a}: ({c})'
+            },
+            xAxis: [
+                {
+                    splitLine: {show: false},
+                    name: 'time',
+                    data: time17net
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    boundaryGap: [0, '100%'],
+                    splitLine: {
+                        show: false
+                    },
+                    name: 'net'
+                }
+            ],
+            series: [
+                {
+                    name:'17节点网络传送',
+                    type: 'line',
+                    data: jsondata17_netr,
+                    showSymbol: false,
+                    hoverAnimation: false
+                },
+                {
+                    name:'17节点网络接收',
+                    type: 'line',
+                    data: jsondata17_nets,
+                    showSymbol: false,
+                    hoverAnimation: false
+                }
+            ]
+        };
+
+        setInterval(function () {
+
+            for (var i = 0; i < 2; i++) {
+                time17net.shift();
+                time17net.push(index17net);
+
+                jsondata17_nets.shift();
+                jsondata17_nets.push(mr17[index17net].netSendSpeed);
+                jsondata17_netr.shift();
+                jsondata17_netr.push(-mr17[index17net].netRecvSpedd);
+
+                index17net++;
+            }
+
+            myChart17net.setOption({
+                xAxis: [{data: time17net}],
+                series: [{data: jsondata17_netr},{data: jsondata17_nets}]
+            });
+        }, 1000);
+
+        if (option17net && typeof option17net === "object") {
+            myChart17net.setOption(option17net, true);
+        }
+    </script>
+
+    <script type="text/javascript">
+
+        var range = 100;
+        var myChart17disk = echarts.init(document.getElementById("container17_disk"));
+
+        var jsondata17_diskw = [];
+        var jsondata17_diskr = [];
+
+        var index17disk = 0;
+        var time17disk = [];
+
+        for (index17disk  = 0;index17disk < range; index17disk++) {
+            time17disk.push(index17disk);
+            jsondata17_diskw.push(mr17[index17disk].diskWriteSpeed);
+            jsondata17_diskr.push(-mr17[index17disk].diskReadSpeed);
+        }
+
+        var option15disk = {
+            legend: {
+                data: ['17节点磁盘读取', '17节点磁盘写入']
+            },
+            tooltip: {
+                formatter: 'Group {a}: ({c})'
+            },
+            xAxis: [
+                {
+                    splitLine: {show: false},
+                    name: 'time',
+                    data: time17disk
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    boundaryGap: [0, '100%'],
+                    splitLine: {
+                        show: false
+                    },
+                    name: 'disk'
+                }
+            ],
+            series: [
+                {
+                    name: '17节点磁盘读取',
+                    type: 'line',
+                    data: jsondata17_diskr,
+                    showSymbol: false,
+                    hoverAnimation: false
+                },
+                {
+                    name: '17节点磁盘写入',
+                    type: 'line',
+                    data: jsondata17_diskw,
+                    showSymbol: false,
+                    hoverAnimation: false
+                }
+            ]
+        };
+
+        setInterval(function () {
+
+            for (var i = 0; i < 2; i++) {
+                time17disk.shift();
+                time17disk.push(index17disk);
+
+                jsondata17_diskw.shift();
+                jsondata17_diskw.push(mr17[index17disk].diskWriteSpeed);
+                jsondata17_diskr.shift();
+                jsondata17_diskr.push(-mr17[index17disk].diskReadSpeed);
+
+                index17disk++;
+            }
+
+            myChart17disk.setOption({
+                xAxis: [{data: time17disk}],
+                series: [{data: jsondata17_diskr},{data: jsondata17_diskw}]
+            });
+        }, 1000);
+
+        if (option15disk && typeof option15disk === "object") {
+            myChart17disk.setOption(option15disk, true);
+        }
+    </script>
+</div>
+
+</body>
+<!--   Core JS Files   -->
+<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!--  Checkbox, Radio & Switch Plugins -->
+<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
+
+<!--  Charts Plugin -->
+<script src="assets/js/chartist.min.js"></script>
+
+<!--  Notifications Plugin    -->
+<script src="assets/js/bootstrap-notify.js"></script>
+
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+<script src="assets/js/light-bootstrap-dashboard.js"></script>
+
+<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+<script src="assets/js/demo.js"></script>
+</html>
