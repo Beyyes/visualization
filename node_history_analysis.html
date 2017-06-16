@@ -46,10 +46,23 @@
 
             <ul class="nav">
                 <li>
-                    <a href="index.html">
+                    <a role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
                     </a>
+                    <div class="collapse" id="collapseExample">
+                        <ul class="nav-open">
+                            <li>
+                                <a href="index.html">内存与CPU
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index_disk.html">网络与磁盘
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
                 </li>
                 <li class="active">
                     <a href="node_history_analysis.html">
@@ -63,7 +76,12 @@
                         <p>Graph</p>
                     </a>
                 </li>
-
+                <li>
+                    <a href="cluster_disk.html">
+                        <i class="pe-7s-ball"></i>
+                        <p>Cluster</p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
@@ -119,301 +137,617 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">网络堆积区域图</h4>
+                            </div>
+                            <div class="content">
+                                <div id="container3" style="height: 250px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">磁盘读写堆积区域图</h4>
+                            </div>
+                            <div class="content">
+                                <div id="container4" style="height: 250px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
     </div>
 <!--<div id="container" style="height: 50%"></div>-->
 <!--<div id="container2" style="height: 50%"></div>-->
-<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
-<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
-<script type="text/javascript"
-        src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
-<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
-<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
-<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
-<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
-<script type="text/javascript" src="./192.168.130.15.js"></script>
-<script type="text/javascript" src="./192.168.130.16.js"></script>
-<script type="text/javascript" src="./192.168.130.17.js"></script>
-<script type="text/javascript" src="./data/mr/192.168.130.15.js"></script>
-<script type="text/javascript" src="./data/mr/192.168.130.16.js"></script>
-<script type="text/javascript" src="./data/mr/192.168.130.17.js"></script>
-<script type="text/javascript" src="./data/mr/192.168.130.18.js"></script>
-<script type="text/javascript" src="./data/mr/192.168.130.19.js"></script>
-<script type="text/javascript">
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+    <script type="text/javascript"
+            src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+    <script type="text/javascript" src="./192.168.130.15.js"></script>
+    <script type="text/javascript" src="./192.168.130.16.js"></script>
+    <script type="text/javascript" src="./192.168.130.17.js"></script>
+    <script type="text/javascript" src="./data/mr/192.168.130.15.js"></script>
+    <script type="text/javascript" src="./data/mr/192.168.130.16.js"></script>
+    <script type="text/javascript" src="./data/mr/192.168.130.17.js"></script>
+    <script type="text/javascript" src="./data/mr/192.168.130.18.js"></script>
+    <script type="text/javascript" src="./data/mr/192.168.130.19.js"></script>
+    <script type="text/javascript">
 
-    var range = 100;
-    var time = [];
-    var jsondata15_cpu = [];
-    var jsondata15_memory = [];
-    var jsondata15_net_send = [];
-    var jsondata15_disk_write = [];
+        var range = 100;
+        var time = [];
+        var jsondata15_cpu = [];
+        var jsondata15_memory = [];
+        var jsondata15_net_send = [];
+        var jsondata15_disk_write = [];
 
-    var jsondata16_cpu = [];
-    var jsondata16_memory = [];
+        var jsondata16_cpu = [];
+        var jsondata16_memory = [];
 
-    var jsondata17_cpu = [];
-    var jsondata17_memory = [];
+        var jsondata17_cpu = [];
+        var jsondata17_memory = [];
 
-    var jsondata18_cpu = [];
-    var jsondata18_memory = [];
+        var jsondata18_cpu = [];
+        var jsondata18_memory = [];
 
-    var idx_15, idx_16, idx_17, idx_18;
+        var idx_15, idx_16, idx_17, idx_18;
 
-    for (idx_15 = 0; idx_15 < range; idx_15++) {
-        time.push(idx_15);
-        jsondata15_cpu.push([idx_15, mr15[idx_15].cpu]);
-        jsondata15_memory.push([idx_15, mr15[idx_15].memUsed]);
-        jsondata15_net_send.push([idx_15, mr15[idx_15].netSendSpeed]);
-        jsondata15_disk_write.push([idx_15, mr15[idx_15].diskWriteSpeed]);
-    }
+        for (idx_15 = 0; idx_15 < range; idx_15++) {
+            time.push(idx_15);
+            jsondata15_cpu.push([idx_15, mr15[idx_15].cpu]);
+            jsondata15_memory.push([idx_15, mr15[idx_15].memUsed]);
+            jsondata15_net_send.push([idx_15, mr15[idx_15].netSendSpeed]);
+            jsondata15_disk_write.push([idx_15, mr15[idx_15].diskWriteSpeed]);
+        }
 
-    for (idx_16 = 0; idx_16 < range; idx_16++) {
-        jsondata16_cpu.push([idx_16, mr16[idx_16].cpu]);
-        jsondata16_memory.push([idx_16, mr16[idx_16].memUsed]);
-    }
+        for (idx_16 = 0; idx_16 < range; idx_16++) {
+            jsondata16_cpu.push([idx_16, mr16[idx_16].cpu]);
+            jsondata16_memory.push([idx_16, mr16[idx_16].memUsed]);
+        }
 
-    for (idx_17 = 0; idx_17 < range; idx_17++) {
-        jsondata17_cpu.push([idx_17, mr17[idx_17].cpu]);
-        jsondata17_memory.push([idx_17, mr17[idx_17].memUsed]);
-    }
+        for (idx_17 = 0; idx_17 < range; idx_17++) {
+            jsondata17_cpu.push([idx_17, mr17[idx_17].cpu]);
+            jsondata17_memory.push([idx_17, mr17[idx_17].memUsed]);
+        }
 
-    for (idx_18 = 0; idx_18 < range; idx_18++) {
-        jsondata18_cpu.push([idx_18, mr18[idx_18].cpu]);
-        jsondata18_memory.push([idx_18, mr18[idx_18].memUsed]);
-    }
+        for (idx_18 = 0; idx_18 < range; idx_18++) {
+            jsondata18_cpu.push([idx_18, mr18[idx_18].cpu]);
+            jsondata18_memory.push([idx_18, mr18[idx_18].memUsed]);
+        }
 
-    var dom = document.getElementById("container");
-    var myChart = echarts.init(dom);
-    var app = {};
-    option = null;
-    option = {
-        title: {
-//            text: 'CPU堆积区域图',
-            x: 'center',
-            y: 0
-        },
-        tooltip: {
-            trigger: 'axis',
-            axisPointer: {
-                type: 'cross',
-                label: {
-                    backgroundColor: '#6a7985'
+        var dom = document.getElementById("container");
+        var myChart = echarts.init(dom);
+        var app = {};
+        option = null;
+        option = {
+            title: {
+//                text: 'CPU堆积区域图',
+                x: 'center',
+                y: 0
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    label: {
+                        backgroundColor: '#6a7985'
+                    }
                 }
-            }
-        },
-        legend: {
-            data: ['15节点cpu使用率', '16节点cpu使用率', '17节点cpu使用率', '18节点cpu使用率'],
-            x: 'center',
-            y: 30
-        },
-        toolbox: {
-            feature: {
-                saveAsImage: {}
-            }
-        },
-        grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
-        },
-        xAxis: [
-            {
-                type: 'category',
-                boundaryGap: false,
-                data: time
-            }
-        ],
-        yAxis: [
-            {
-                type: 'value'
-            }
-        ],
-        series: [
-            {
-                name: '15节点cpu使用率',
-                type: 'line',
-                stack: '总量',
-                areaStyle: {normal: {}},
-                data: jsondata15_cpu
             },
-            {
-                name: '16节点cpu使用率',
-                type: 'line',
-                stack: '总量',
-                areaStyle: {normal: {}},
-                data: jsondata16_cpu
+            legend: {
+                data: ['15节点cpu使用率', '16节点cpu使用率', '17节点cpu使用率', '18节点cpu使用率'],
+                x: 'center',
+                y: 30
             },
-            {
-                name: '17节点cpu使用率',
-                type: 'line',
-                stack: '总量',
-                areaStyle: {normal: {}},
-                data: jsondata17_cpu
-            },
-            {
-                name: '18节点cpu使用率',
-                type: 'line',
-                stack: '总量',
-                areaStyle: {normal: {}},
-                data: jsondata18_cpu
-            }
-        ]
-    };
-
-    if (option && typeof option === "object") {
-        myChart.setOption(option, true);
-    }
-</script>
-<script type="text/javascript">
-
-    var range = 100;
-    var time = [];
-    var jsondata15_cpu = [];
-    var jsondata15_memory = [];
-    var jsondata15_net_send = [];
-    var jsondata15_disk_write = [];
-
-    var jsondata16_cpu = [];
-    var jsondata16_memory = [];
-
-    var jsondata17_cpu = [];
-    var jsondata17_memory = [];
-
-    var jsondata18_cpu = [];
-    var jsondata18_memory = [];
-
-    var idx_15, idx_16, idx_17, idx_18;
-
-    for (idx_15 = 0; idx_15 < range; idx_15++) {
-        time.push(idx_15);
-        jsondata15_cpu.push([idx_15, mr15[idx_15].cpu]);
-        jsondata15_memory.push([idx_15, mr15[idx_15].memUsed]);
-        jsondata15_net_send.push([idx_15, mr15[idx_15].netSendSpeed]);
-        jsondata15_disk_write.push([idx_15, mr15[idx_15].diskWriteSpeed]);
-    }
-
-    for (idx_16 = 0; idx_16 < range; idx_16++) {
-        jsondata16_cpu.push([idx_16, mr16[idx_16].cpu]);
-        jsondata16_memory.push([idx_16, mr16[idx_16].memUsed]);
-    }
-
-    for (idx_17 = 0; idx_17 < range; idx_17++) {
-        jsondata17_cpu.push([idx_17, mr17[idx_17].cpu]);
-        jsondata17_memory.push([idx_17, mr17[idx_17].memUsed]);
-    }
-
-    for (idx_18 = 0; idx_18 < range; idx_18++) {
-        jsondata18_cpu.push([idx_18, mr18[idx_18].cpu]);
-        jsondata18_memory.push([idx_18, mr18[idx_18].memUsed]);
-    }
-
-    var dom = document.getElementById("container2");
-    var myChart = echarts.init(dom);
-    var app = {};
-    option = null;
-    option = {
-        title: {
-//            text: '内存堆积区域图',
-            x: 'center',
-            y: 0
-        },
-        tooltip: {
-            trigger: 'axis',
-            axisPointer: {
-                type: 'cross',
-                label: {
-                    backgroundColor: '#6a7985'
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
                 }
-            }
-        },
-        legend: {
-            data: ['15节点内存使用率', '16节点内存使用率', '17节点内存使用率', '18节点内存使用率'],
-            x: 'center',
-            y: 30
-        },
-        toolbox: {
-            feature: {
-                saveAsImage: {}
-            }
-        },
-        grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
-        },
-        xAxis: [
-            {
-                type: 'category',
-                boundaryGap: false,
-                data: time
-            }
-        ],
-        yAxis: [
-            {
-                type: 'value'
-            }
-        ],
-        series: [
-            {
-                name: '15节点内存使用率',
-                type: 'line',
-                stack: '总量',
-                areaStyle: {normal: {}},
-                data: jsondata15_memory
             },
-            {
-                name: '16节点内存使用率',
-                type: 'line',
-                stack: '总量',
-                areaStyle: {normal: {}},
-                data: jsondata16_memory
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
             },
-            {
-                name: '17节点内存使用率',
-                type: 'line',
-                stack: '总量',
-                areaStyle: {normal: {}},
-                data: jsondata17_memory
-            },
-            {
-                name: '18节点内存使用率',
-                type: 'line',
-                stack: '总量',
-                areaStyle: {normal: {}},
-                data: jsondata18_memory
-            }
-        ]
-    };
+            xAxis: [
+                {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: time
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value'
+                }
+            ],
+            series: [
+                {
+                    name: '15节点cpu使用率',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data: jsondata15_cpu
+                },
+                {
+                    name: '16节点cpu使用率',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data: jsondata16_cpu
+                },
+                {
+                    name: '17节点cpu使用率',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data: jsondata17_cpu
+                },
+                {
+                    name: '18节点cpu使用率',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data: jsondata18_cpu
+                }
+            ]
+        };
 
-    if (option && typeof option === "object") {
-        myChart.setOption(option, true);
-    }
-</script>
+        if (option && typeof option === "object") {
+            myChart.setOption(option, true);
+        }
+    </script>
+    <script type="text/javascript">
+
+        var range = 100;
+        var time = [];
+        var jsondata15_cpu = [];
+        var jsondata15_memory = [];
+        var jsondata15_net_send = [];
+        var jsondata15_disk_write = [];
+
+        var jsondata16_cpu = [];
+        var jsondata16_memory = [];
+
+        var jsondata17_cpu = [];
+        var jsondata17_memory = [];
+
+        var jsondata18_cpu = [];
+        var jsondata18_memory = [];
+
+        var idx_15, idx_16, idx_17, idx_18;
+
+        for (idx_15 = 0; idx_15 < range; idx_15++) {
+            time.push(idx_15);
+            jsondata15_cpu.push([idx_15, mr15[idx_15].cpu]);
+            jsondata15_memory.push([idx_15, mr15[idx_15].memUsed]);
+            jsondata15_net_send.push([idx_15, mr15[idx_15].netSendSpeed]);
+            jsondata15_disk_write.push([idx_15, mr15[idx_15].diskWriteSpeed]);
+        }
+
+        for (idx_16 = 0; idx_16 < range; idx_16++) {
+            jsondata16_cpu.push([idx_16, mr16[idx_16].cpu]);
+            jsondata16_memory.push([idx_16, mr16[idx_16].memUsed]);
+        }
+
+        for (idx_17 = 0; idx_17 < range; idx_17++) {
+            jsondata17_cpu.push([idx_17, mr17[idx_17].cpu]);
+            jsondata17_memory.push([idx_17, mr17[idx_17].memUsed]);
+        }
+
+        for (idx_18 = 0; idx_18 < range; idx_18++) {
+            jsondata18_cpu.push([idx_18, mr18[idx_18].cpu]);
+            jsondata18_memory.push([idx_18, mr18[idx_18].memUsed]);
+        }
+
+        var dom = document.getElementById("container2");
+        var myChart = echarts.init(dom);
+        var app = {};
+        option = null;
+        option = {
+            title: {
+//                text: '内存堆积区域图',
+                x: 'center',
+                y: 0
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    label: {
+                        backgroundColor: '#6a7985'
+                    }
+                }
+            },
+            legend: {
+                data: ['15节点内存使用率', '16节点内存使用率', '17节点内存使用率', '18节点内存使用率'],
+                x: 'center',
+                y: 30
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: time
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value'
+                }
+            ],
+            series: [
+                {
+                    name: '15节点内存使用率',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data: jsondata15_memory
+                },
+                {
+                    name: '16节点内存使用率',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data: jsondata16_memory
+                },
+                {
+                    name: '17节点内存使用率',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data: jsondata17_memory
+                },
+                {
+                    name: '18节点内存使用率',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data: jsondata18_memory
+                }
+            ]
+        };
+
+        if (option && typeof option === "object") {
+            myChart.setOption(option, true);
+        }
+    </script>
+    <script type="text/javascript">
+
+        var range = 100;
+        var time = [];
+        var jsondata15_cpu = [];
+        var jsondata15_memory = [];
+        var jsondata15_net_send = [];
+        var jsondata15_net_receive = [];
+        var jsondata15_disk_write = [];
+
+        var jsondata16_cpu = [];
+        var jsondata16_memory = [];
+        var jsondata16_net_send = [];
+        var jsondata16_net_receive = [];
+        var jsondata16_disk_write = [];
+
+        var jsondata17_cpu = [];
+        var jsondata17_memory = [];
+        var jsondata17_net_send = [];
+        var jsondata17_net_receive = [];
+        var jsondata17_disk_write = [];
+
+        var jsondata18_cpu = [];
+        var jsondata18_memory = [];
+        var jsondata18_net_send = [];
+        var jsondata18_net_receive = [];
+        var jsondata18_disk_write = [];
+
+        var idx_15, idx_16, idx_17, idx_18;
+
+        for (idx_15 = 0; idx_15 < range; idx_15++) {
+            time.push(idx_15);
+            jsondata15_cpu.push([idx_15, mr15[idx_15].cpu]);
+            jsondata15_memory.push([idx_15, mr15[idx_15].memUsed]);
+            jsondata15_net_send.push([idx_15, mr15[idx_15].netSendSpeed]);
+            jsondata15_net_receive.push([idx_15, mr15[idx_15].netRecvSpedd]);
+            jsondata15_disk_write.push([idx_15, mr15[idx_15].diskWriteSpeed]);
+        }
+
+        for (idx_16 = 0; idx_16 < range; idx_16++) {
+            jsondata16_cpu.push([idx_16, mr16[idx_16].cpu]);
+            jsondata16_memory.push([idx_16, mr16[idx_16].memUsed]);
+            jsondata16_net_send.push([idx_16, mr16[idx_16].netSendSpeed]);
+            jsondata16_net_receive.push([idx_16, mr15[idx_16].netRecvSpedd]);
+            jsondata16_disk_write.push([idx_16, mr15[idx_16].diskWriteSpeed]);
+        }
+
+        for (idx_17 = 0; idx_17 < range; idx_17++) {
+            jsondata17_cpu.push([idx_17, mr17[idx_17].cpu]);
+            jsondata17_memory.push([idx_17, mr17[idx_17].memUsed]);
+            jsondata15_net_send.push([idx_17, mr17[idx_17].netSendSpeed]);
+            jsondata17_net_receive.push([idx_17, mr15[idx_17].netRecvSpedd]);
+            jsondata17_disk_write.push([idx_17, mr15[idx_17].diskWriteSpeed]);
+        }
+
+        for (idx_18 = 0; idx_18 < range; idx_18++) {
+            jsondata18_cpu.push([idx_18, mr18[idx_18].cpu]);
+            jsondata18_memory.push([idx_18, mr18[idx_18].memUsed]);
+            jsondata18_net_send.push([idx_18, mr15[idx_18].netSendSpeed]);
+            jsondata18_net_receive.push([idx_18, mr15[idx_18].netRecvSpedd]);
+            jsondata18_disk_write.push([idx_18, mr15[idx_18].diskWriteSpeed]);
+        }
+
+        var dom = document.getElementById("container3");
+        var myChart = echarts.init(dom);
+        var app = {};
+        option = null;
+        option = {
+            title: {
+//                text: '网络堆积区域图',
+                x: 'center',
+                y: 0
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    label: {
+                        backgroundColor: '#6d7985'
+                    }
+                }
+            },
+            legend: {
+                data: ['15节点网络堆积', '16节点网络堆积', '17节点网络堆积', '18节点网络堆积'],
+                x: 'center',
+                y: 30
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: time
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value'
+                }
+            ],
+            series: [
+                {
+                    name: '15节点网络堆积',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data: jsondata15_net_send
+                },
+                {
+                    name: '16节点网络堆积',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data: jsondata16_net_send
+                },
+                {
+                    name: '17节点网络堆积',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data: jsondata17_net_send
+                },
+                {
+                    name: '18节点网络堆积',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data: jsondata18_net_send
+                }
+            ]
+        };
+
+        if (option && typeof option === "object") {
+            myChart.setOption(option, true);
+        }
+    </script>
+    <script type="text/javascript">
+
+        var range = 100;
+        var time = [];
+        var jsondata15_cpu = [];
+        var jsondata15_memory = [];
+        var jsondata15_net_send = [];
+        var jsondata15_net_receive = [];
+        var jsondata15_disk_write = [];
+
+        var jsondata16_cpu = [];
+        var jsondata16_memory = [];
+        var jsondata16_net_send = [];
+        var jsondata16_net_receive = [];
+        var jsondata16_disk_write = [];
+
+        var jsondata17_cpu = [];
+        var jsondata17_memory = [];
+        var jsondata17_net_send = [];
+        var jsondata17_net_receive = [];
+        var jsondata17_disk_write = [];
+
+        var jsondata18_cpu = [];
+        var jsondata18_memory = [];
+        var jsondata18_net_send = [];
+        var jsondata18_net_receive = [];
+        var jsondata18_disk_write = [];
+
+        var idx_15, idx_16, idx_17, idx_18;
+
+        for (idx_15 = 0; idx_15 < range; idx_15++) {
+            time.push(idx_15);
+            jsondata15_cpu.push([idx_15, mr15[idx_15].cpu]);
+            jsondata15_memory.push([idx_15, mr15[idx_15].memUsed]);
+            jsondata15_net_send.push([idx_15, mr15[idx_15].netSendSpeed]);
+            jsondata15_net_receive.push([idx_15, mr15[idx_15].netRecvSpedd]);
+            jsondata15_disk_write.push([idx_15, mr15[idx_15].diskWriteSpeed]);
+        }
+
+        for (idx_16 = 0; idx_16 < range; idx_16++) {
+            jsondata16_cpu.push([idx_16, mr16[idx_16].cpu]);
+            jsondata16_memory.push([idx_16, mr16[idx_16].memUsed]);
+            jsondata16_net_send.push([idx_16, mr16[idx_16].netSendSpeed]);
+            jsondata16_net_receive.push([idx_16, mr15[idx_16].netRecvSpedd]);
+            jsondata16_disk_write.push([idx_16, mr15[idx_16].diskWriteSpeed]);
+        }
+
+        for (idx_17 = 0; idx_17 < range; idx_17++) {
+            jsondata17_cpu.push([idx_17, mr17[idx_17].cpu]);
+            jsondata17_memory.push([idx_17, mr17[idx_17].memUsed]);
+            jsondata15_net_send.push([idx_17, mr17[idx_17].netSendSpeed]);
+            jsondata17_net_receive.push([idx_17, mr15[idx_17].netRecvSpedd]);
+            jsondata17_disk_write.push([idx_17, mr15[idx_17].diskWriteSpeed]);
+        }
+
+        for (idx_18 = 0; idx_18 < range; idx_18++) {
+            jsondata18_cpu.push([idx_18, mr18[idx_18].cpu]);
+            jsondata18_memory.push([idx_18, mr18[idx_18].memUsed]);
+            jsondata18_net_send.push([idx_18, mr15[idx_18].netSendSpeed]);
+            jsondata18_net_receive.push([idx_18, mr15[idx_18].netRecvSpedd]);
+            jsondata18_disk_write.push([idx_18, mr15[idx_18].diskWriteSpeed]);
+        }
+
+        var dom = document.getElementById("container4");
+        var myChart = echarts.init(dom);
+        var app = {};
+        option = null;
+        option = {
+            title: {
+//                text: '磁盘读写堆积区域图',
+                x: 'center',
+                y: 0
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    label: {
+                        backgroundColor: '#6d7985'
+                    }
+                }
+            },
+            legend: {
+                data: ['15节点网络堆积', '16节点网络堆积', '17节点网络堆积', '18节点网络堆积'],
+                x: 'center',
+                y: 30
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: time
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value'
+                }
+            ],
+            series: [
+                {
+                    name: '15节点网络堆积',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data: jsondata15_disk_write
+                },
+                {
+                    name: '16节点网络堆积',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data: jsondata16_disk_write
+                },
+                {
+                    name: '17节点网络堆积',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data: jsondata17_disk_write
+                },
+                {
+                    name: '18节点网络堆积',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data: jsondata18_disk_write
+                }
+            ]
+        };
+
+        if (option && typeof option === "object") {
+            myChart.setOption(option, true);
+        }
+    </script>
 </div>
 </body>
 <!--   Core JS Files   -->
-<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../Downloads/x_lbd_free_v1.3.1/assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="../../Downloads/x_lbd_free_v1.3.1/assets/js/bootstrap.min.js" type="text/javascript"></script>
 
 <!--  Checkbox, Radio & Switch Plugins -->
-<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
+<script src="../../Downloads/x_lbd_free_v1.3.1/assets/js/bootstrap-checkbox-radio-switch.js"></script>
 
 <!--  Charts Plugin -->
-<script src="assets/js/chartist.min.js"></script>
+<script src="../../Downloads/x_lbd_free_v1.3.1/assets/js/chartist.min.js"></script>
 
 <!--  Notifications Plugin    -->
-<script src="assets/js/bootstrap-notify.js"></script>
+<script src="../../Downloads/x_lbd_free_v1.3.1/assets/js/bootstrap-notify.js"></script>
 
 <!--  Google Maps Plugin    -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
 <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-<script src="assets/js/light-bootstrap-dashboard.js"></script>
+<script src="../../Downloads/x_lbd_free_v1.3.1/assets/js/light-bootstrap-dashboard.js"></script>
 
 <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-<script src="assets/js/demo.js"></script>
+<script src="../../Downloads/x_lbd_free_v1.3.1/assets/js/demo.js"></script>
 </html>
